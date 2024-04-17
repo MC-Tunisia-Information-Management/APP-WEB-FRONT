@@ -1,0 +1,24 @@
+.footer{
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 7%;
+    padding-right: 22%;
+    justify-content: space-between;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    color: white;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.aiesec-org-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.word-aiesec-link{
+    text-decoration: underline;
+}

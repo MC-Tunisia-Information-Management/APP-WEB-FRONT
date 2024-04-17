@@ -1,0 +1,65 @@
+.navbar{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+   
+}
+
+
+
+.navbar-content{
+    flex: 70%;
+    justify-content: right;
+    padding-right: 7%;
+    column-gap: 30px;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.navbar-logo{
+    display: flex;
+    flex: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 15%;
+    cursor: pointer;
+  
+   
+
+}
+
+.navbar-button{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px; /* Adjust height as needed */
+    width: 110px;
+    border-radius: 30px;
+    
+}
+
+.navbar-button-text{
+  background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 2px;
+  padding-right: 1px;
+}

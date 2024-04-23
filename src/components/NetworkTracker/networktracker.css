@@ -1,0 +1,88 @@
+.networktracker{
+    margin-top: 60px;
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    background-size: cover;
+    position: relative;
+
+
+
+}
+
+
+.upperimage{
+    width: 100%;
+}
+
+.navbar{
+    z-index: 2;
+}
+
+.knowledgehub-upper{
+    position: relative;
+    height: 91vh;
+
+}
+
+.knowledgehub-upper-text-image-container{
+    position: absolute;
+    top: 39%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    margin: auto 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-text-container{
+    flex: 65%;
+}
+
+.upper-image-container{
+    flex: 35%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.knowledge-text-type1{
+    color: var(--red);
+    font-size: 500%;
+    margin-bottom: -15px;
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+
+}
+
+.hubhub{
+    column-gap: 25px;
+    
+}
+
+.knowledge-text-type2{
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 180%;
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 1.3;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+}
+
+.knowledge-text-type2-container{
+    margin-top: 15px;
+}
+
+.folder-image{
+    margin-top: 20px;
+    max-width: 270px;
+}
+  

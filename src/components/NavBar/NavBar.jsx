@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import Logo from '../../assests/logo-transparent.png'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
     const buttonStyle = {
@@ -15,15 +16,36 @@ function NavBar() {
   return (
     <>
         <section className='flex-horizontal navbar'>
-            <div className='navbar-logo'>
-                <img src={Logo} alt="logo" />
-            </div>
+            <Link to="/home">
+                <div className='navbar-logo'>
+                    
+                        <img src={Logo} alt="logo" />
+                    
+                    
+                </div>
+            </Link>
             <div className='flex-horizontal navbar-content'>
-                <div>MC Tunisia</div>
-                <div>Knowledge Hub</div>
-                <div>Network Trackers</div>
-                <div>Application</div>
-                <div>Conference Output</div>
+                
+                <Link to="/mc-tunisia" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>MC Tunisia</div>
+                </Link>
+                <Link to="/knowledge-hub" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>Knowledge Hub</div>
+                </Link>
+                <Link to="/network-trackers" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>Network Trackers</div>
+                </Link>
+                <Link to="/application" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>Application</div>
+                </Link>
+                <Link to="/conference-output" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>Conference Output</div>
+                </Link>
+
+                
+                
+                
+                
             </div>
             <div className='navbar-button-container'>
                 <div className='navbar-button'>

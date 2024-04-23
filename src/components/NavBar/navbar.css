@@ -39,7 +39,6 @@
     align-items: center;
     justify-content: center;
     flex: 15%;
-    cursor: pointer;
   
    
 
@@ -53,6 +52,8 @@
     height: 35px; /* Adjust height as needed */
     width: 110px;
     border-radius: 30px;
+    cursor: pointer;
+
     
 }
 

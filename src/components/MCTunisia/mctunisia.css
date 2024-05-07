@@ -1,4 +1,4 @@
-.conferenceouputs{
+.mctunsia{
     margin-top: 60px;
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     background-size: cover;
@@ -17,13 +17,13 @@
     z-index: 2;
 }
 
-.conferenceouputs-upper{
+.mctunsia-upper{
     position: relative;
     height: 91vh;
 
 }
 
-.conferenceouputs-upper-text-image-container{
+.mctunsia-upper-text-image-container{
     position: absolute;
     top: 39%;
     left: 47%;
@@ -47,7 +47,7 @@
     justify-content: center;
 }
 
-.conferenceouputs-text-type1{
+.mctunsia-text-type1{
     color: var(--red);
     font-size: 500%;
     margin-bottom: -15px;
@@ -63,7 +63,7 @@
     
 }
 
-.conferenceouputs-text-type2{
+.mctunsia-text-type2{
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,7 +77,7 @@
     letter-spacing: 0.5px;
 }
 
-.conferenceouputs-text-type2-container{
+.mctunsia-text-type2-container{
     margin-top: 15px;
 }
 

@@ -38,8 +38,8 @@ function NavBar() {
                 <Link to="/application" style={{ color: 'inherit', textDecoration: 'none' }}>
                     <div>Application</div>
                 </Link>
-                <Link to="/conference-output" style={{ color: 'inherit', textDecoration: 'none' }}>
-                    <div>Conference Output</div>
+                <Link to="/conference-outputs" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div>Conference Outputs</div>
                 </Link>
 
                 
@@ -48,9 +48,11 @@ function NavBar() {
                 
             </div>
             <div className='navbar-button-container'>
+                <Link to="/contact-us" style={{ color: 'inherit', textDecoration: 'none' }}>
                 <div className='navbar-button'>
                     <div className='navbar-button-text'>Contact us</div>
                 </div>
+                </Link>
             </div>
         </section>
     </>

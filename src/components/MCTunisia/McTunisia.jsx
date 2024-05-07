@@ -1,22 +1,21 @@
 import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
-import './conferenceoutputs.css'
+import './mctunisia.css'
 import upperimage from '../../assests/layerlayer.png'
 import folderimage from '../../assests/folderimage.png'
 
-function ConferenceOutputs() {
+function McTunisia() {
   return (
     <>
       <NavBar className='navbarr' />
-      <section className='conferenceouputs'>
-        <div className='conferenceouputs-upper'>
+      <section className='mctunsia'>
+        <div className='mctunsia-upper'>
           <div><img className='upperimage' src={upperimage} alt="" /></div>
-          <div className='conferenceouputs-upper-text-image-container'>
+          <div className='mctunsia-upper-text-image-container'>
             <div className='upper-text-container'>
-              <div className='conferenceouputs-text-type1'>CONFERENCE</div>
+              <div className='mctunsia-text-type1'>MC Tunisia</div>
            
-                <div className='conferenceouputs-text-type1'>OUTPUTS</div>
                 
             
             </div>
@@ -38,4 +37,4 @@ function ConferenceOutputs() {
   )
 }
 
-export default ConferenceOutputs
+export default McTunisia

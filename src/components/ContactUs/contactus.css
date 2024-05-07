@@ -1,4 +1,4 @@
-.conferenceouputs{
+.contactus{
     margin-top: 60px;
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     background-size: cover;
@@ -17,16 +17,16 @@
     z-index: 2;
 }
 
-.conferenceouputs-upper{
+.contactus-upper{
     position: relative;
     height: 91vh;
 
 }
 
-.conferenceouputs-upper-text-image-container{
+.contactus-form-and-title{
     position: absolute;
-    top: 39%;
-    left: 47%;
+    top: 13%;
+    left: 45%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
@@ -47,9 +47,9 @@
     justify-content: center;
 }
 
-.conferenceouputs-text-type1{
+.contactus-text-type1{
     color: var(--red);
-    font-size: 500%;
+    font-size: 350%;
     margin-bottom: -15px;
     font-family: "Holtwood One SC", serif;
     font-weight: 400;
@@ -63,7 +63,7 @@
     
 }
 
-.conferenceouputs-text-type2{
+.contactus-text-type2{
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,7 +77,7 @@
     letter-spacing: 0.5px;
 }
 
-.conferenceouputs-text-type2-container{
+.contactus-text-type2-container{
     margin-top: 15px;
 }
 

@@ -85,4 +85,47 @@
     margin-top: 20px;
     max-width: 270px;
 }
+
+.conference-cards-container{
+    padding: 10px 25% 60px 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.conference-card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    min-height: 400px;
+    max-height: 400px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+
+}
+
+.conference-card-upper{
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    border-radius: 10px;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conference-card-title{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    font-family: konnect, sans-serif;
+    font-style: normal !important;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 200%;
+}
+
   

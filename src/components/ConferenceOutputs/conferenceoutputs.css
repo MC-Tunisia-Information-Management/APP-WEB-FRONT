@@ -55,12 +55,10 @@
     font-weight: 400;
     font-style: normal;
     line-height: 1.4;
-
 }
 
 .hubhub{
-    column-gap: 25px;
-    
+    column-gap: 25px;  
 }
 
 .conferenceouputs-text-type2{
@@ -127,5 +125,3 @@
     font-weight: 500;
     font-size: 200%;
 }
-
-  

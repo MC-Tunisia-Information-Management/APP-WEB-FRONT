@@ -6,9 +6,17 @@ import upperimage from "../../assests/layerlayer.png";
 import mcimage from "../../assests/MCpic.png";
 import ReactSimplyCarousel from "react-simply-carousel";
 import { useState } from "react";
-import boumiza from "../../assests/boumiza.jpg";
-import mhiri from "../../assests/mhiri.jpg";
-import hamma from "../../assests/hamma.jpg";
+import boumiza from "../../assests/MC Pictures/boumiza.jpg";
+import mhiri from "../../assests/MC Pictures/mhiri.jpg";
+import chaima from "../../assests/MC Pictures/chaima.jpg";
+import hamma from "../../assests/MC Pictures/hamma.jpg";
+import azmi from "../../assests/MC Pictures/azmi.jpg";
+import boughi from "../../assests/MC Pictures/boughi.jpg";
+import lamis from "../../assests/MC Pictures/lamis.jpg";
+import nacef from "../../assests/MC Pictures/nacef.jpg";
+import slim from "../../assests/MC Pictures/slim.jpg";
+import hiba from "../../assests/MC Pictures/hiba.jpg";
+import eya from "../../assests/MC Pictures/eya.jpg";
 
 function McTunisia() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -108,7 +116,23 @@ function McTunisia() {
                   textAlign: "center",
                   width: 30,
                 },
-                children: <span>{`>`}</span>,
+                children: (
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      />
+                    </svg>
+                  </span>
+                ),
               }}
               backwardBtnProps={{
                 //here you can also pass className, or any other button element attributes
@@ -125,7 +149,23 @@ function McTunisia() {
                   textAlign: "center",
                   width: 30,
                 },
-                children: <span>{`<`}</span>,
+                children: (
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-left"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                      />
+                    </svg>
+                  </span>
+                ),
               }}
               responsiveProps={[
                 {
@@ -134,9 +174,25 @@ function McTunisia() {
                   minWidth: 768,
                 },
               ]}
-              speed={200}
+              speed={600}
+              easing="ease"
             >
-              {/* here you can also pass any other element attributes. Also, you can use your custom components as slides */}
+              <div className="mc-carousel-card">
+                <img src={hamma} alt="MCP" />
+                <p className="mc-position">
+                  Hamma Lahouar
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCP</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={azmi} alt="MCVP OD" />
+                <p className="mc-position">
+                  Azmi Abroug
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP OD</span>
+                </p>
+              </div>
               <div className="mc-carousel-card">
                 <img src={boumiza} alt="MCVP IM" />
                 <p className="mc-position">
@@ -146,19 +202,67 @@ function McTunisia() {
                 </p>
               </div>
               <div className="mc-carousel-card">
-                <img src={mhiri} alt="MCVP IM" />
+                <img src={boughi} alt="MCVP TM" />
                 <p className="mc-position">
-                  Amine Mhiri
+                  Ahmed Boughizene
                   <br />
-                  <span style={{ color: "#646A69" }}>MCVP BD</span>
+                  <span style={{ color: "#646A69" }}>MCVP TM</span>
                 </p>
               </div>
               <div className="mc-carousel-card">
-                <img src={hamma} alt="MCVP IM" />
+                <img src={chaima} alt="MCVP MKT" />
                 <p className="mc-position">
-                  Hamma Lahouar
+                  Chaima Sassi
                   <br />
-                  <span style={{ color: "#646A69" }}>MCP</span>
+                  <span style={{ color: "#646A69" }}>MCVP MKT</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={lamis} alt="MCVP OGT" />
+                <p className="mc-position">
+                  Lamis Redissi
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP OGT</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={nacef} alt="MCVP OGV" />
+                <p className="mc-position">
+                  Yassine Nacef
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP OGV</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={slim} alt="MCVP IGT" />
+                <p className="mc-position">
+                  Slim Labassi
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP IGT</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={hiba} alt="MCVP IGV" />
+                <p className="mc-position">
+                  Hiba Laatiri
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP IGV</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={mhiri} alt="MCVP BD&EWA" />
+                <p className="mc-position">
+                  Amine Mhiri
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP BD&EWA</span>
+                </p>
+              </div>
+              <div className="mc-carousel-card">
+                <img src={eya} alt="MCVP F&L" />
+                <p className="mc-position">
+                  Eya Achour
+                  <br />
+                  <span style={{ color: "#646A69" }}>MCVP F&L</span>
                 </p>
               </div>
             </ReactSimplyCarousel>

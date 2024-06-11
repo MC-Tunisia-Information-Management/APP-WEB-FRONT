@@ -47,6 +47,7 @@ function ContactUs() {
                       <Form.Control
                         type="text"
                         name="fullName"
+                        className="input"
                         value={formData.fullName}
                         onChange={handleChange}
                         required
@@ -56,9 +57,10 @@ function ContactUs() {
                   </Col>
                   <Col md={12} className="forminput">
                     <Form.Group controlId="email">
-                      <Form.Label>Email</Form.Label>
                       <Form.Control
                         type="email"
+                        placeholder="Email"
+                        className="input"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -68,22 +70,41 @@ function ContactUs() {
                   </Col>
                   <Col md={12} className="forminput">
                     <Form.Group controlId="phoneNumber">
-                      <Form.Label>Phone Number</Form.Label>
                       <Form.Control
                         type="tel"
+                        className="input-area"
                         name="phoneNumber"
+                        as="textarea"
+                        placeholder="Type your message..."
+                        rows={3}
                         value={formData.phoneNumber}
                         onChange={handleChange}
                         required
                       />
                     </Form.Group>
                   </Col>
+                  <Col
+                    md={12}
+                    className="forminput d-flex justify-content-center"
+                  >
+                    <Form.Group controlId="acceptTerms" className="mb-3">
+                      <Form.Check
+                        type="checkbox"
+                        name="acceptTerms"
+                        checked={formData.acceptTerms}
+                        onChange={handleChange}
+                        className="terms-checkbox"
+                        required
+                        label={
+                          <>
+                            I accept the <a href="/terms">Terms</a>
+                          </>
+                        }
+                      />
+                    </Form.Group>
+                  </Col>
                   <Col md={12} className="d-flex justify-content-center">
-                    <Button
-                      className="rounded-pill submit"
-                      variant="primary"
-                      type="submit"
-                    >
+                    <Button className="submit" variant="primary" type="submit">
                       Submit
                     </Button>
                   </Col>

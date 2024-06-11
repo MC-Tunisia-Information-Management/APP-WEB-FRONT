@@ -82,9 +82,23 @@
   margin-top: 15px;
 }
 
+.image-hex-contianer {
+  position: relative;
+  display: inline-block;
+}
+
 .folder-image {
   margin-top: 20px;
   max-width: 270px;
+  position: relative;
+}
+
+.hex-image {
+  position: absolute;
+  top: -50%;
+  z-index: -1;
+  left: -50%;
+  max-width: 180%;
 }
 
 .conference-cards-container {

@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Application from "./components/Application/Application";
 import ContactUs from "./components/ContactUs/ContactUs";
 import McTunisia from "./components/MCTunisia/McTunisia";
+import HubPage from "./components/KnowledgeHub/HubPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/home" element={<NavBar />} />
               <Route path="/mc-tunisia" element={<NavBar />} />
               <Route path="/knowledge-hub" element={<NavBar />} />
+              <Route path="/knowledge-hub/:hub" element={<NavBar />} />
               <Route path="/network-trackers" element={<NavBar />} />
               <Route path="/conference-outputs" element={<NavBar />} />
               <Route path="/contact-us" element={<NavBar />} />
@@ -30,6 +32,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/mc-tunisia" element={<McTunisia />} />
             <Route path="/knowledge-hub" element={<KnowledgeHub />} />
+            <Route path="/knowledge-hub/:hub" element={<HubPage />} />
             <Route path="/network-trackers" element={<NetworkTracker />} />
             <Route path="/application" element={<Application />} />
             <Route path="/conference-outputs" element={<ConferenceOutputs />} />

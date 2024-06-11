@@ -17,6 +17,8 @@
   overflow: hidden;
   position: relative;
   max-height: 412px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .mc-position {
@@ -41,7 +43,6 @@
 
 .mc-image {
   display: block;
-  border-radius: 50px; /* Optional: Matches the container's border radius */
   max-width: 270px;
 }
 

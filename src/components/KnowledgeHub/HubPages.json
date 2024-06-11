@@ -1,0 +1,38 @@
+{
+    "mkt": {
+        "title": "Marketing"
+    },
+    "bd": {
+        "title": "Business Development"
+    },
+    "fnl": {
+        "title": "FINANCE & LEGALITIES"
+    },
+    "tm": {
+        "title": "TALENT MANAGEMENT"
+    },
+    "ecb": {
+        "title": "ENTITY CONTROL BOARD"
+    },
+    "od": {
+        "title": "ORGANIZATION DEVELOPMENT"
+    },
+    "ogta": {
+        "title": "OUTGOING GLOBAL TALENT"
+    },
+    "ogv": {
+        "title": "OUTGOING GLOBAL VOLUNTEER"
+    },
+    "ogte": {
+        "title": "OUTGOING GLOBAL TEACHER"
+    },
+    "igta": {
+        "title": "INCOMING GLOBAL TALENT"
+    },
+    "igv": {
+        "title": "INCOMING GLOBAL VOLUNTEER"
+    },
+    "igte": {
+        "title": "INCOMING GLOBAL TEACHER"
+    }
+}

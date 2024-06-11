@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import "./conferenceoutputs.css";
 import upperimage from "../../assests/layerlayer.png";
 import conferenceoutputsimage from "../../assests/conferenceoutputsimage.png";
+import hexagon from "../../assests/hexagon.png";
 
 function ConferenceOutputs() {
   // Define conference data with titles and corresponding external links
@@ -36,13 +37,13 @@ function ConferenceOutputs() {
               <div className="conferenceouputs-text-type1">OUTPUTS</div>
             </div>
             <div className="upper-image-container">
-              <div className="circle"></div>
-              <div>
+              <div className="image-hex-contianer">
                 <img
                   className="folder-image"
                   src={conferenceoutputsimage}
                   alt=""
                 />
+                <img className="hex-image" src={hexagon} alt="" />
               </div>
             </div>
           </div>

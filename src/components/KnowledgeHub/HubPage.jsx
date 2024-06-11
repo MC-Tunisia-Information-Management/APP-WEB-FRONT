@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-import "./knowledgehub.css";
+import "./hubPages.css";
 import upperimage from "../../assests/layerlayer.png";
 import folderimage from "../../assests/folderimage.png";
 import ellipse from "../../assests/Ellipse 8.png";
+import pages from "./HubPages";
+import { useParams } from "react-router-dom";
 
-function KnowledgeHub() {
+function HubPage() {
+  let { hub } = useParams();
+  useEffect(() => {});
   return (
     <>
       <NavBar />
@@ -17,13 +21,10 @@ function KnowledgeHub() {
           </div>
           <div className="knowledgehub-upper-text-image-container">
             <div className="upper-text-container">
-              <div className="knowledge-text-type1">KNOWLEDGE</div>
+              <div className="knowledge-text-type1">{pages[hub].title}</div>
               <div className="flex-horizontal hubhub">
                 <div className="knowledge-text-type1">HUB</div>
-                <div className="knowledge-text-type2-container">
-                  <div className="knowledge-text-type2">EVERYTHING YOU</div>
-                  <div className="knowledge-text-type2">NEED IN ONE PLACE.</div>
-                </div>
+                <div className="knowledge-text-type2-container"></div>
               </div>
             </div>
             <div className="upper-image-container">
@@ -134,4 +135,4 @@ function KnowledgeHub() {
   );
 }
 
-export default KnowledgeHub;
+export default HubPage;

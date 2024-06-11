@@ -1,66 +1,136 @@
-import React from 'react'
-import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
-import './knowledgehub.css'
-import upperimage from '../../assests/layerlayer.png'
-import folderimage from '../../assests/folderimage.png'
+import React from "react";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
+import "./knowledgehub.css";
+import upperimage from "../../assests/layerlayer.png";
+import folderimage from "../../assests/folderimage.png";
 
 function KnowledgeHub() {
   return (
     <>
-      
-      <section className='knowledgehub'>
-        <div className='knowledgehub-upper'>
-          <div><img className='upperimage' src={upperimage} alt="" /></div>
-          <div className='knowledgehub-upper-text-image-container'>
-            <div className='upper-text-container'>
-              <div className='knowledge-text-type1'>KNOWLEDGE</div>
-              <div className='flex-horizontal hubhub'>
-                <div className='knowledge-text-type1'>HUB</div>
-                <div className='knowledge-text-type2-container'>
-                  <div className='knowledge-text-type2'>EVERYTHING YOU</div>
-                  <div className='knowledge-text-type2'>NEED IN ONE PLACE.</div>
-                  
+      <NavBar />
+      <section className="knowledgehub">
+        <div className="knowledgehub-upper">
+          <div>
+            <img className="upperimage" src={upperimage} alt="" />
+          </div>
+          <div className="knowledgehub-upper-text-image-container">
+            <div className="upper-text-container">
+              <div className="knowledge-text-type1">KNOWLEDGE</div>
+              <div className="flex-horizontal hubhub">
+                <div className="knowledge-text-type1">HUB</div>
+                <div className="knowledge-text-type2-container">
+                  <div className="knowledge-text-type2">EVERYTHING YOU</div>
+                  <div className="knowledge-text-type2">NEED IN ONE PLACE.</div>
                 </div>
               </div>
             </div>
-            <div className='upper-image-container'>
-              <div className='circle'></div>
+            <div className="upper-image-container">
+              <div className="circle"></div>
               <div>
-                <img className='folder-image' src={folderimage} alt="" />
+                <img className="folder-image" src={folderimage} alt="" />
               </div>
             </div>
           </div>
         </div>
         <div className="middle-container">
-          <div className='middle-part-title'>THE BACK OFFICE</div>
-          <div className='middle-part-content-container'>
-            <div className='card'>MARKETING</div>
-            <div className='card'>BUSINESS DEVELOPMENT</div>
-            <div className='card'>FINANCE & LEGALITIES</div>
-            <div className='card'>TALENT MANAGMENT</div>
-            <div className='card'>ENTITY CONTROL BOARD</div>
-            <div className='card'>ORGANIZATIONAL DEVELOPMENT</div>
+          <div className="middle-part-title">THE BACK OFFICE</div>
+          <div className="middle-part-content-container">
+            <a
+              href="https://example.com/marketing"
+              target="_blank"
+              className="card"
+            >
+              MARKETING
+            </a>
+            <a
+              href="https://example.com/business-development"
+              target="_blank"
+              className="card"
+            >
+              BUSINESS DEVELOPMENT
+            </a>
+            <a
+              href="https://example.com/finance-legalities"
+              target="_blank"
+              className="card"
+            >
+              FINANCE & LEGALITIES
+            </a>
+            <a
+              href="https://example.com/talent-management"
+              target="_blank"
+              className="card"
+            >
+              TALENT MANAGEMENT
+            </a>
+            <a
+              href="https://example.com/entity-control-board"
+              target="_blank"
+              className="card"
+            >
+              ENTITY CONTROL BOARD
+            </a>
+            <a
+              href="https://example.com/organizational-development"
+              target="_blank"
+              className="card"
+            >
+              ORGANIZATIONAL DEVELOPMENT
+            </a>
           </div>
         </div>
         <div className="middle-container">
-          <div className='middle-part-title'>THE FRONT OFFICE</div>
-          <div className='middle-part-content-container'>
-            <div className='card'>OUTGOING GLOBAL TALENT</div>
-            <div className='card'>OUTGOING GLOBAL TEACHER</div>
-            <div className='card'>OUTGOING GLOBAL VOLUNTEER</div>
-            <div className='card'>INCOMING GLOBAL TALENT</div>
-            <div className='card'>INCOMING GLOBAL TEACHER</div>
-            <div className='card'>INCOMING GLOBAL VOLUNTEER</div>
+          <div className="middle-part-title">THE FRONT OFFICE</div>
+          <div className="middle-part-content-container">
+            <a
+              href="https://example.com/outgoing-global-talent"
+              target="_blank"
+              className="card"
+            >
+              OUTGOING GLOBAL TALENT
+            </a>
+            <a
+              href="https://example.com/outgoing-global-teacher"
+              target="_blank"
+              className="card"
+            >
+              OUTGOING GLOBAL TEACHER
+            </a>
+            <a
+              href="https://example.com/outgoing-global-volunteer"
+              target="_blank"
+              className="card"
+            >
+              OUTGOING GLOBAL VOLUNTEER
+            </a>
+            <a
+              href="https://example.com/incoming-global-talent"
+              target="_blank"
+              className="card"
+            >
+              INCOMING GLOBAL TALENT
+            </a>
+            <a
+              href="https://example.com/incoming-global-teacher"
+              target="_blank"
+              className="card"
+            >
+              INCOMING GLOBAL TEACHER
+            </a>
+            <a
+              href="https://example.com/incoming-global-volunteer"
+              target="_blank"
+              className="card"
+            >
+              INCOMING GLOBAL VOLUNTEER
+            </a>
           </div>
         </div>
       </section>
       <Footer />
-
-
-
     </>
-  )
+  );
 }
 
-export default KnowledgeHub
+export default KnowledgeHub;

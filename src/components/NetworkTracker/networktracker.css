@@ -1,29 +1,24 @@
-.networktracker{
+.networktracker {
     margin-top: 60px;
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     background-size: cover;
     position: relative;
-
-
-
 }
 
-
-.upperimage{
+.upperimage {
     width: 100%;
 }
 
-.navbar{
+.navbar {
     z-index: 2;
 }
 
-.networktracker-upper{
+.networktracker-upper {
     position: relative;
     height: 91vh;
-
 }
 
-.networktracker-upper-text-image-container{
+.networktracker-upper-text-image-container {
     position: absolute;
     top: 40%;
     left: 47%;
@@ -36,18 +31,18 @@
     justify-content: center;
 }
 
-.upper-text-container{
+.upper-text-container {
     flex: 65%;
 }
 
-.upper-image-container{
+.upper-image-container {
     flex: 35%;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.networktracker-text-type1{
+.networktracker-text-type1 {
     color: var(--red);
     font-size: 500%;
     margin-bottom: -15px;
@@ -55,15 +50,13 @@
     font-weight: 400;
     font-style: normal;
     line-height: 1.4;
-
 }
 
-.hubhub{
+.hubhub {
     column-gap: 25px;
-    
 }
 
-.networktracker-text-type2{
+.networktracker-text-type2 {
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,16 +70,16 @@
     letter-spacing: 0.5px;
 }
 
-.networktracker-text-type2-container{
+.networktracker-text-type2-container {
     margin-top: 15px;
 }
 
-.folder-image{
+.folder-image {
     margin-top: 20px;
     max-width: 270px;
 }
-  
-.networktracker-content-container{
+
+.networktracker-content-container {
     padding: 100px 12%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,10 +87,9 @@
     justify-content: center;
     row-gap: 30px;
     column-gap: 50px;
-
 }
 
-.networktracker-card{
+.networktracker-card {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     min-height: 250px;
@@ -106,11 +98,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-
-
 }
 
-.networktracker-card-upper{
+.networktracker-card-upper {
     background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     border-radius: 10px;
     min-height: 160px;
@@ -120,16 +110,32 @@
     justify-content: center;
 }
 
-.networktracker-card-title{
+.networktracker-card-title {
     padding-left: 10px;
     display: flex;
     align-items: center;
-    background-color: bisque;
-    font-family: konnect, sans-serif;
-    font-style: normal !important;
+    background-color: transparent;
+    font-family: 'Konnect', sans-serif;
+    font-style: italic !important;
     color: rgb(0, 0, 0);
     font-weight: 500;
-    font-size: 200%;
+    font-size: 32px; /* Adjusted size to maintain consistency */
 }
 
 
+.networktracker-card-upper {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 140%; /* or 67px */
+    color: #FFFFFF;
+}
+
+.networktracker-card-upper a {
+    text-decoration: none;
+}
+
+.networktracker-card-upper a:hover {
+    text-decoration: none;
+}

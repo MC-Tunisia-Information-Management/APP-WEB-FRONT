@@ -100,7 +100,6 @@ function McTunisia() {
               onRequestChange={setActiveSlideIndex}
               itemsToShow={1}
               itemsToScroll={1}
-              updateOnItemClick={true}
               forwardBtnProps={{
                 //here you can also pass className, or any other button element attributes
                 style: {

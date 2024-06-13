@@ -8,11 +8,13 @@ import Application from "./components/Application/Application";
 import ContactUs from "./components/ContactUs/ContactUs";
 import McTunisia from "./components/MCTunisia/McTunisia";
 import HubPage from "./components/KnowledgeHub/HubPage";
+import ScrollToTop from "./components/NavBar/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <main>
           <div>
             <Routes>
@@ -31,8 +33,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<Home />} />
             <Route path="/mc-tunisia" element={<McTunisia />} />
-            <Route path="/knowledge-hub" element={<KnowledgeHub />} />
             <Route path="/knowledge-hub/:hub" element={<HubPage />} />
+            <Route path="/knowledge-hub" element={<KnowledgeHub />} />
             <Route path="/network-trackers" element={<NetworkTracker />} />
             <Route path="/application" element={<Application />} />
             <Route path="/conference-outputs" element={<ConferenceOutputs />} />

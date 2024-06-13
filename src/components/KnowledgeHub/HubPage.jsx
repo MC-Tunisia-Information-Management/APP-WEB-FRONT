@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./hubPages.css";
@@ -6,11 +6,15 @@ import upperimage from "../../assests/layerlayer.png";
 import folderimage from "../../assests/folderimage.png";
 import ellipse from "../../assests/Ellipse 8.png";
 import pages from "./HubPages";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function HubPage() {
   let { hub } = useParams();
-  useEffect(() => {});
+  let [page] = useState(pages[hub]);
+  let [image, setImage] = useState("");
+  useEffect(() => {
+    setImage(require(`../../assests/${pages[hub]["image"]}`));
+  }, [hub]);
   return (
     <>
       <NavBar />
@@ -29,105 +33,44 @@ function HubPage() {
             </div>
             <div className="upper-image-container">
               <div>
-                <img className="folder-image" src={folderimage} alt="" />
+                <img className="folder-image" src={image} alt="" />
               </div>
               <img className="ellips-image" src={ellipse} alt="" />
             </div>
           </div>
         </div>
-        <div className="middle-container">
-          <div className="middle-part-title">THE BACK OFFICE</div>
-          <div className="middle-part-content-container">
-            <a
-              href="https://example.com/marketing"
-              target="_blank"
-              className="card"
-            >
-              MARKETING
-            </a>
-            <a
-              href="https://example.com/business-development"
-              target="_blank"
-              className="card"
-            >
-              BUSINESS DEVELOPMENT
-            </a>
-            <a
-              href="https://example.com/finance-legalities"
-              target="_blank"
-              className="card"
-            >
-              FINANCE & LEGALITIES
-            </a>
-            <a
-              href="https://example.com/talent-management"
-              target="_blank"
-              className="card"
-            >
-              TALENT MANAGEMENT
-            </a>
-            <a
-              href="https://example.com/entity-control-board"
-              target="_blank"
-              className="card"
-            >
-              ENTITY CONTROL BOARD
-            </a>
-            <a
-              href="https://example.com/organizational-development"
-              target="_blank"
-              className="card"
-            >
-              ORGANIZATIONAL DEVELOPMENT
-            </a>
-          </div>
-        </div>
-        <div className="middle-container">
-          <div className="middle-part-title">THE FRONT OFFICE</div>
-          <div className="middle-part-content-container">
-            <a
-              href="https://example.com/outgoing-global-talent"
-              target="_blank"
-              className="card"
-            >
-              OUTGOING GLOBAL TALENT
-            </a>
-            <a
-              href="https://example.com/outgoing-global-teacher"
-              target="_blank"
-              className="card"
-            >
-              OUTGOING GLOBAL TEACHER
-            </a>
-            <a
-              href="https://example.com/outgoing-global-volunteer"
-              target="_blank"
-              className="card"
-            >
-              OUTGOING GLOBAL VOLUNTEER
-            </a>
-            <a
-              href="https://example.com/incoming-global-talent"
-              target="_blank"
-              className="card"
-            >
-              INCOMING GLOBAL TALENT
-            </a>
-            <a
-              href="https://example.com/incoming-global-teacher"
-              target="_blank"
-              className="card"
-            >
-              INCOMING GLOBAL TEACHER
-            </a>
-            <a
-              href="https://example.com/incoming-global-volunteer"
-              target="_blank"
-              className="card"
-            >
-              INCOMING GLOBAL VOLUNTEER
-            </a>
-          </div>
+        <div className="networktracker-content-container">
+          {page["content"] ? (
+            page["content"].map((ele, id) => {
+              return (
+                <Link
+                  key={id}
+                  to="https://docs.google.com/spreadsheets/d/1flgEi9EyQl6cHoZk87KrKcmg6owssrolGR2HLMHzbIo/edit#gid=74829231"
+                  className="networktracker-card"
+                >
+                  <div className="networktracker-card-upper card-upper-1">
+                    {ele.title}
+                  </div>
+                  <div className="networktracker-card-title card-title-1">
+                    {ele.subtitle}
+                  </div>
+                </Link>
+              );
+            })
+          ) : (
+            <></>
+          )}
+          {/* <Link
+            to="https://docs.google.com/spreadsheets/d/1flgEi9EyQl6cHoZk87KrKcmg6owssrolGR2HLMHzbIo/edit#gid=74829231"
+            className="networktracker-card"
+          >
+            <div className="networktracker-card-upper card-upper-1">
+              Network Tracker S1
+            </div>
+            <div className="networktracker-card-title card-title-1">
+              First semester of 23-24 - MC OWN
+            </div>
+          </Link> */}
         </div>
       </section>
       <Footer />

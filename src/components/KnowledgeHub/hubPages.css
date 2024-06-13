@@ -35,6 +35,70 @@
   justify-content: center;
 }
 
+.networktracker-card-upper {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color1),
+    var(--main-color2)
+  );
+  border-radius: 10px;
+  min-height: 160px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.networktracker-card-title {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-family: "Konnect", sans-serif;
+  font-style: italic !important;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 22px; /* Adjusted size to maintain consistency */
+}
+
+.networktracker-card-upper {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 140%; /* or 67px */
+  color: #ffffff;
+}
+
+.networktracker-card-upper a {
+  text-decoration: none;
+}
+
+.networktracker-card-upper a:hover {
+  text-decoration: none;
+}
+
+.networktracker-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  min-height: 250px;
+  max-height: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.networktracker-content-container {
+  padding: 100px 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+  column-gap: 50px;
+}
+
 .upper-text-container {
   flex: 65%;
 }

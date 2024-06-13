@@ -5,6 +5,7 @@ import "./knowledgehub.css";
 import upperimage from "../../assests/layerlayer.png";
 import folderimage from "../../assests/folderimage.png";
 import ellipse from "../../assests/Ellipse 8.png";
+import { Link } from "react-router-dom";
 
 function KnowledgeHub() {
   return (
@@ -34,99 +35,113 @@ function KnowledgeHub() {
             </div>
           </div>
         </div>
+
         <div className="middle-container">
           <div className="middle-part-title">THE BACK OFFICE</div>
           <div className="middle-part-content-container">
-            <a
-              href="https://example.com/marketing"
-              target="_blank"
-              className="card"
-            >
+            <Link to="/knowledge-hub/mkt" className="card">
               MARKETING
-            </a>
-            <a
-              href="https://example.com/business-development"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/bd" className="card">
               BUSINESS DEVELOPMENT
-            </a>
-            <a
-              href="https://example.com/finance-legalities"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/fnl" className="card">
               FINANCE & LEGALITIES
-            </a>
-            <a
-              href="https://example.com/talent-management"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/tm" className="card">
               TALENT MANAGEMENT
-            </a>
-            <a
-              href="https://example.com/entity-control-board"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/ecb" className="card">
               ENTITY CONTROL BOARD
-            </a>
-            <a
-              href="https://example.com/organizational-development"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/od" className="card">
               ORGANIZATIONAL DEVELOPMENT
-            </a>
+            </Link>
           </div>
+          <svg
+            width="1740"
+            className="line1"
+            height="240"
+            viewBox="0 0 1740 240"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
+              stroke="white"
+              strokeWidth="10"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <svg
+            width="1740"
+            className="line2"
+            height="240"
+            viewBox="0 0 1740 240"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
+              stroke="white"
+              strokeWidth="10"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
+
         <div className="middle-container">
           <div className="middle-part-title">THE FRONT OFFICE</div>
           <div className="middle-part-content-container">
-            <a
-              href="https://example.com/outgoing-global-talent"
-              target="_blank"
-              className="card"
-            >
+            <Link to="/knowledge-hub/ogta" className="card">
               OUTGOING GLOBAL TALENT
-            </a>
-            <a
-              href="https://example.com/outgoing-global-teacher"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/ogte" className="card">
               OUTGOING GLOBAL TEACHER
-            </a>
-            <a
-              href="https://example.com/outgoing-global-volunteer"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/ogv" className="card">
               OUTGOING GLOBAL VOLUNTEER
-            </a>
-            <a
-              href="https://example.com/incoming-global-talent"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/igta" className="card">
               INCOMING GLOBAL TALENT
-            </a>
-            <a
-              href="https://example.com/incoming-global-teacher"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/igte" className="card">
               INCOMING GLOBAL TEACHER
-            </a>
-            <a
-              href="https://example.com/incoming-global-volunteer"
-              target="_blank"
-              className="card"
-            >
+            </Link>
+            <Link to="/knowledge-hub/igv" className="card">
               INCOMING GLOBAL VOLUNTEER
-            </a>
+            </Link>
           </div>
+          <svg
+            width="1740"
+            className="line1"
+            height="240"
+            viewBox="0 0 1740 240"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
+              stroke="white"
+              strokeWidth="10"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <svg
+            width="1740"
+            className="line2"
+            height="240"
+            viewBox="0 0 1740 240"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
+              stroke="white"
+              strokeWidth="10"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
       </section>
       <Footer />

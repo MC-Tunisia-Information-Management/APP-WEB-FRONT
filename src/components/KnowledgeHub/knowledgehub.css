@@ -102,7 +102,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   margin-top: 70px;
+}
+
+.line1 {
+  position: absolute; /* Position the SVG absolutely */
+  top: 25%; /* Adjust the top position as needed */
+  left: -15%;
+  right: 0;
+  transform: rotate(-5deg);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.line2 {
+  overflow: hidden;
+  position: absolute; /* Position the SVG absolutely */
+  top: 70%; /* Adjust the top position as needed */
+  left: -15%;
+  right: 0;
+  transform: rotate(-5deg);
+  z-index: 0;
 }
 
 .middle-part-title {
@@ -126,6 +147,7 @@
 .card {
   min-height: 180px;
   min-width: 100px;
+  z-index: 1;
   border-radius: 20px;
   padding: 20px;
   display: flex;

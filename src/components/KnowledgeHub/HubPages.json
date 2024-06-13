@@ -1,38 +1,278 @@
 {
     "mkt": {
+        "image": "mkt.png",
         "title": "Marketing"
     },
     "bd": {
+        "image": "bd.png",
         "title": "Business Development"
     },
     "fnl": {
+        "image": "fnl.png",
         "title": "FINANCE & LEGALITIES"
     },
     "tm": {
+        "image": "tm.png",
         "title": "TALENT MANAGEMENT"
     },
     "ecb": {
+        "image": "ecb.png",
         "title": "ENTITY CONTROL BOARD"
     },
     "od": {
+        "image": "od.png",
         "title": "ORGANIZATION DEVELOPMENT"
     },
     "ogta": {
-        "title": "OUTGOING GLOBAL TALENT"
+        "title": "OUTGOING GLOBAL TALENT",
+        "image": "gta.png",
+        "content": [
+            {
+                "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
+                "title": "Exchange Standards",
+                "subtitle": "What are the exchange standards?"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1HbRrgNfc0fb0i_6ngTC52vPpbg6BAnr8/view?usp=sharing",
+                "title": "Sales",
+                "subtitle": "How to sell GT"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1SjIYRARmYP6V4HmfpSu07Ljl0H6CSpX0_jsrKbLJTRQ/edit?usp=sharing",
+                "title": "Consideration phase",
+                "subtitle": "How to help our customers get an opportunity"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1uH8-CA_iVG29lDtfJdTgJAl9Ou88F7xFiSpUZPsHYXw/edit?usp=sharing",
+                "title": "Preperation phase",
+                "subtitle": "How to help the EP perpare for their experience"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/14gcQK_kiJCzwvx1bYueCtUlnLslmPWdUClEMW-l5JEk/edit?usp=sharing",
+                "title": "IR Summit",
+                "subtitle": "Get to know what IR is"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1wg9t2zdKVysy68obvb_t3wXKElMDNcrDpfbEVHdjN3k/edit?usp=sharing",
+                "title": "The Experience Phase",
+                "subtitle": "The phase where we change peoples lives"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Post Experience Phase",
+                "subtitle": "What to do post experience?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Data in OGT",
+                "subtitle": "Get to know what is data"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1fjohG0RMmR3X831Gx8kC6AAWII_RVacFYVxdwEVBHq0/edit?usp=sharing",
+                "title": "Being a VP OGT",
+                "subtitle": "What does it mean to be a VP OGT?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1HdyxwW8EUOu4gMvF3bQkoHoAZai4cBC7J1sdjzyyM2k/edit?usp=sharing",
+                "title": "MOGX Synergy",
+                "subtitle": "What does is the MOGX Synergy"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1kAxKTjJTd92GrCgxK3r99XEfH6Uhq5F_/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "Department and Team Management",
+                "subtitle": "How to manage OGT"
+            }
+        ]
     },
     "ogv": {
+        "image": "gv.png",
         "title": "OUTGOING GLOBAL VOLUNTEER"
     },
     "ogte": {
-        "title": "OUTGOING GLOBAL TEACHER"
+        "image": "gte.png",
+        "title": "OUTGOING GLOBAL TEACHER",
+        "content": [
+            {
+                "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
+                "title": "Exchange Standards",
+                "subtitle": "What are the exchange standards?"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1HbRrgNfc0fb0i_6ngTC52vPpbg6BAnr8/view?usp=sharing",
+                "title": "Sales",
+                "subtitle": "How to sell GT"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1SjIYRARmYP6V4HmfpSu07Ljl0H6CSpX0_jsrKbLJTRQ/edit?usp=sharing",
+                "title": "Consideration phase",
+                "subtitle": "How to help our customers get an opportunity"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1uH8-CA_iVG29lDtfJdTgJAl9Ou88F7xFiSpUZPsHYXw/edit?usp=sharing",
+                "title": "Preperation phase",
+                "subtitle": "How to help the EP perpare for their experience"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/14gcQK_kiJCzwvx1bYueCtUlnLslmPWdUClEMW-l5JEk/edit?usp=sharing",
+                "title": "IR Summit",
+                "subtitle": "Get to know what IR is"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1wg9t2zdKVysy68obvb_t3wXKElMDNcrDpfbEVHdjN3k/edit?usp=sharing",
+                "title": "The Experience Phase",
+                "subtitle": "The phase where we change peoples lives"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Post Experience Phase",
+                "subtitle": "What to do post experience?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Data in OGT",
+                "subtitle": "Get to know what is data"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1fjohG0RMmR3X831Gx8kC6AAWII_RVacFYVxdwEVBHq0/edit?usp=sharing",
+                "title": "Being a VP OGT",
+                "subtitle": "What does it mean to be a VP OGT?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1HdyxwW8EUOu4gMvF3bQkoHoAZai4cBC7J1sdjzyyM2k/edit?usp=sharing",
+                "title": "MOGX Synergy",
+                "subtitle": "What does is the MOGX Synergy"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1kAxKTjJTd92GrCgxK3r99XEfH6Uhq5F_/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "Department and Team Management",
+                "subtitle": "How to manage OGT"
+            }
+        ]
     },
     "igta": {
-        "title": "INCOMING GLOBAL TALENT"
+        "image": "gta.png",
+        "title": "INCOMING GLOBAL TALENT",
+        "content": [
+            {
+                "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
+                "title": "Exchange Standards",
+                "subtitle": "What are the exchange standards?"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1HbRrgNfc0fb0i_6ngTC52vPpbg6BAnr8/view?usp=sharing",
+                "title": "Sales",
+                "subtitle": "How to sell GT"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1SjIYRARmYP6V4HmfpSu07Ljl0H6CSpX0_jsrKbLJTRQ/edit?usp=sharing",
+                "title": "Consideration phase",
+                "subtitle": "How to help our customers get an opportunity"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1uH8-CA_iVG29lDtfJdTgJAl9Ou88F7xFiSpUZPsHYXw/edit?usp=sharing",
+                "title": "Preperation phase",
+                "subtitle": "How to help the EP perpare for their experience"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/14gcQK_kiJCzwvx1bYueCtUlnLslmPWdUClEMW-l5JEk/edit?usp=sharing",
+                "title": "IR Summit",
+                "subtitle": "Get to know what IR is"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1wg9t2zdKVysy68obvb_t3wXKElMDNcrDpfbEVHdjN3k/edit?usp=sharing",
+                "title": "The Experience Phase",
+                "subtitle": "The phase where we change peoples lives"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Post Experience Phase",
+                "subtitle": "What to do post experience?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Data in OGT",
+                "subtitle": "Get to know what is data"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1fjohG0RMmR3X831Gx8kC6AAWII_RVacFYVxdwEVBHq0/edit?usp=sharing",
+                "title": "Being a VP OGT",
+                "subtitle": "What does it mean to be a VP OGT?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1HdyxwW8EUOu4gMvF3bQkoHoAZai4cBC7J1sdjzyyM2k/edit?usp=sharing",
+                "title": "MOGX Synergy",
+                "subtitle": "What does is the MOGX Synergy"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1kAxKTjJTd92GrCgxK3r99XEfH6Uhq5F_/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "Department and Team Management",
+                "subtitle": "How to manage OGT"
+            }
+        ]
     },
     "igv": {
+        "image": "gv.png",
         "title": "INCOMING GLOBAL VOLUNTEER"
     },
     "igte": {
-        "title": "INCOMING GLOBAL TEACHER"
+        "image": "gte.png",
+        "title": "INCOMING GLOBAL TEACHER",
+        "content": [
+            {
+                "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
+                "title": "Exchange Standards",
+                "subtitle": "What are the exchange standards?"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1HbRrgNfc0fb0i_6ngTC52vPpbg6BAnr8/view?usp=sharing",
+                "title": "Sales",
+                "subtitle": "How to sell GT"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1SjIYRARmYP6V4HmfpSu07Ljl0H6CSpX0_jsrKbLJTRQ/edit?usp=sharing",
+                "title": "Consideration phase",
+                "subtitle": "How to help our customers get an opportunity"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1uH8-CA_iVG29lDtfJdTgJAl9Ou88F7xFiSpUZPsHYXw/edit?usp=sharing",
+                "title": "Preperation phase",
+                "subtitle": "How to help the EP perpare for their experience"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/14gcQK_kiJCzwvx1bYueCtUlnLslmPWdUClEMW-l5JEk/edit?usp=sharing",
+                "title": "IR Summit",
+                "subtitle": "Get to know what IR is"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1wg9t2zdKVysy68obvb_t3wXKElMDNcrDpfbEVHdjN3k/edit?usp=sharing",
+                "title": "The Experience Phase",
+                "subtitle": "The phase where we change peoples lives"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Post Experience Phase",
+                "subtitle": "What to do post experience?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1O31Ob_L6dUXLuf1xqKQcvnTu9oWrqJQ1MzKAnyJ-87U/edit?usp=sharing",
+                "title": "Data in OGT",
+                "subtitle": "Get to know what is data"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1fjohG0RMmR3X831Gx8kC6AAWII_RVacFYVxdwEVBHq0/edit?usp=sharing",
+                "title": "Being a VP OGT",
+                "subtitle": "What does it mean to be a VP OGT?"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1HdyxwW8EUOu4gMvF3bQkoHoAZai4cBC7J1sdjzyyM2k/edit?usp=sharing",
+                "title": "MOGX Synergy",
+                "subtitle": "What does is the MOGX Synergy"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1kAxKTjJTd92GrCgxK3r99XEfH6Uhq5F_/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "Department and Team Management",
+                "subtitle": "How to manage OGT"
+            }
+        ]
     }
 }

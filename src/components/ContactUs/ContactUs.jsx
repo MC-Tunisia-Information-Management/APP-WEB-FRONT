@@ -3,13 +3,15 @@ import Footer from "../Footer/Footer";
 import "./contactus.css";
 import upperimage from "../../assests/layerlayer.png";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 function ContactUs() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    "Full Name": "",
+    Email: "",
+    Message: "",
   });
-
+  const [formdisable, setDisable] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -20,14 +22,37 @@ function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDisable(true);
+    const formDataObject = new FormData();
+    formDataObject.append("Full Name", formData["Full Name"]);
+    formDataObject.append("Email", formData.Email);
+    formDataObject.append("Message", formData.Message);
+
     // Handle form submission here, e.g., send data to server
     console.log(formData);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbx34wiyo6dKub5Zzx-Jq2J0PsTBZlbyZACmNgDTRTZev15spI-f0VZr7GL6RWTXlS0cqg/exec",
+      { method: "POST", body: formDataObject }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          // Log detailed error information
+          return response.text().then((text) => {
+            throw new Error(
+              `Network response was not ok: ${response.statusText}. Response body: ${text}`
+            );
+          });
+        }
+        return response.json();
+      })
+      .then((data) => {
+        alert("Your message has been sucessfully sent!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
     // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
@@ -46,9 +71,10 @@ function ContactUs() {
                     <Form.Group controlId="fullName">
                       <Form.Control
                         type="text"
-                        name="fullName"
+                        disabled={formdisable}
+                        name="Full Name"
                         className="input"
-                        value={formData.fullName}
+                        value={formData["Full Name"]}
                         onChange={handleChange}
                         required
                         placeholder="Name"
@@ -61,23 +87,25 @@ function ContactUs() {
                         type="email"
                         placeholder="Email"
                         className="input"
-                        name="email"
-                        value={formData.email}
+                        disabled={formdisable}
+                        name="Email"
+                        value={formData.Email}
                         onChange={handleChange}
                         required
                       />
                     </Form.Group>
                   </Col>
                   <Col md={12} className="forminput">
-                    <Form.Group controlId="phoneNumber">
+                    <Form.Group controlId="message">
                       <Form.Control
-                        type="tel"
+                        type="text"
                         className="input-area"
-                        name="phoneNumber"
+                        disabled={formdisable}
+                        name="Message"
                         as="textarea"
                         placeholder="Type your message..."
                         rows={3}
-                        value={formData.phoneNumber}
+                        value={formData.Message}
                         onChange={handleChange}
                         required
                       />
@@ -91,8 +119,7 @@ function ContactUs() {
                       <Form.Check
                         type="checkbox"
                         name="acceptTerms"
-                        checked={formData.acceptTerms}
-                        onChange={handleChange}
+                        disabled={formdisable}
                         className="terms-checkbox"
                         required
                         label={
@@ -104,7 +131,12 @@ function ContactUs() {
                     </Form.Group>
                   </Col>
                   <Col md={12} className="d-flex justify-content-center">
-                    <Button className="submit" variant="primary" type="submit">
+                    <Button
+                      className="submit"
+                      disabled={formdisable}
+                      variant="primary"
+                      type="submit"
+                    >
                       Submit
                     </Button>
                   </Col>

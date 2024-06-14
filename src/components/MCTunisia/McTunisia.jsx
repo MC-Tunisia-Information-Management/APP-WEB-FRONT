@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./mctunisia.css";
@@ -17,10 +17,17 @@ import nacef from "../../assests/MC Pictures/nacef.jpg";
 import slim from "../../assests/MC Pictures/slim.jpg";
 import hiba from "../../assests/MC Pictures/hiba.jpg";
 import eya from "../../assests/MC Pictures/eya.jpg";
+import ReactGA from "react-ga4";
 
 function McTunisia() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/mc-tunisia",
+      title: "MC Tunisia",
+    });
+  });
   return (
     <>
       <NavBar className="navbarr" />

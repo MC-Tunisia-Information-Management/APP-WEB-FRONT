@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import "./contactus.css";
 import upperimage from "../../assests/layerlayer.png";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import ReactGA from "react-ga4";
+import NavBar from "../NavBar/NavBar";
+
 function ContactUs() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/contact-us",
+      title: "Contact Us",
+    });
+  });
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     "Full Name": "",
@@ -58,6 +68,7 @@ function ContactUs() {
   return (
     <>
       <section className="contactus">
+        <NavBar />
         <div className="contactus-upper">
           <div>
             <img className="upperimage" src={upperimage} alt="" />

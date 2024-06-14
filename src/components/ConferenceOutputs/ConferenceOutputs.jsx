@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./conferenceoutputs.css";
 import upperimage from "../../assests/layerlayer.png";
 import conferenceoutputsimage from "../../assests/conferenceoutputsimage.png";
 import hexagon from "../../assests/hexagon.png";
+import ReactGA from "react-ga4";
 
 function ConferenceOutputs() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/conference-outputs",
+      title: "Conference Outputs",
+    });
+  });
   // Define conference data with titles and corresponding external links
   const conferenceData = [
     {

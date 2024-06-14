@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
 import NavBar from "../NavBar/NavBar";
 import homePageImage from "../../assests/home-page-image-finish.png";
@@ -8,8 +8,17 @@ import cursor from "../../assests/cursor.png";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
+import ReactGA from "react-ga4";
+import { Link } from "react-router-dom";
 
 function Home() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/",
+      title: "Home",
+    });
+  });
   return (
     <>
       <section className="flex-vertical home">
@@ -63,30 +72,39 @@ function Home() {
           </div>
 
           <div className="social-media-links-container">
-            <div className="flex-horizontal social-media-links">
+            <Link
+              to="https://www.facebook.com/AIESEC.Tunisia"
+              className="flex-horizontal social-media-links"
+            >
               <div className="logoo">
                 <AiFillFacebook className="social-media-links-logo" />
               </div>
               <div className="texxt">
                 <div className="social-media-links-text">AIESEC in Tunisia</div>
               </div>
-            </div>
-            <div className="flex-horizontal social-media-links">
+            </Link>
+            <Link
+              to="https://www.instagram.com/aiesecintunisia/"
+              className="flex-horizontal social-media-links"
+            >
               <div className="logoo">
                 <AiFillInstagram className="social-media-links-logo" />
               </div>
               <div className="texxt">
                 <div className="social-media-links-text">aiesecintunisia</div>
               </div>
-            </div>
-            <div className="flex-horizontal social-media-links">
+            </Link>
+            <Link
+              to="https://www.linkedin.com/company/aiesec-tunisia/mycompany/"
+              className="flex-horizontal social-media-links"
+            >
               <div className="logoo">
                 <AiFillLinkedin className="social-media-links-logo" />
               </div>
               <div className="texxt">
                 <div className="social-media-links-text">AIESEC Tunisia</div>
               </div>
-            </div>
+            </Link>
           </div>
           <div>
             <img className="cursor-home-page" src={cursor} alt="" />

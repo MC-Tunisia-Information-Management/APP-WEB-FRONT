@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <>
       <section className="flex-horizontal navbar">
-        <Link to="/home">
+        <Link to="/">
           <div className="navbar-logo">
             <img src={Logo} alt="logo" />
           </div>

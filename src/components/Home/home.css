@@ -151,6 +151,7 @@
 }
 
 .social-media-links {
+  text-decoration: none;
 }
 
 .flex-horizontal {
@@ -183,12 +184,15 @@
 }
 
 .social-media-links-logo {
+  text-decoration: none;
+
   color: black;
   width: 17px;
   height: 17px;
 }
 
 .social-media-links-text {
+  text-decoration: none;
   color: white;
   font-weight: 500;
   text-align: center;

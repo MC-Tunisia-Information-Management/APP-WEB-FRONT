@@ -7,12 +7,18 @@ import folderimage from "../../assests/folderimage.png";
 import ellipse from "../../assests/Ellipse 8.png";
 import pages from "./HubPages";
 import { Link, useParams } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 function HubPage() {
   let { hub } = useParams();
   let [page] = useState(pages[hub]);
   let [image, setImage] = useState("");
   useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: `/knowledge-hub/${hub}`,
+      title: `${hub} Knowledge Hub`,
+    });
     setImage(require(`../../assests/${pages[hub]["image"]}`));
   }, [hub]);
   return (

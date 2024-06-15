@@ -1,3 +1,4 @@
+/* Original styles */
 .home-main-page {
   margin-top: 60px;
   width: 100%;
@@ -53,6 +54,7 @@
   margin-top: -5px;
   margin-bottom: -20px;
 }
+
 .home-main-page-text-type2 {
   color: var(--red);
   font-size: 500%;
@@ -144,7 +146,6 @@
 
 .social-media-links-container {
   color: white;
-
   display: flex;
   flex-direction: column;
   row-gap: 15px;
@@ -185,7 +186,6 @@
 
 .social-media-links-logo {
   text-decoration: none;
-
   color: black;
   width: 17px;
   height: 17px;
@@ -201,4 +201,97 @@
 .cursor-home-page {
   width: 180px;
   height: 160px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .home-main-page {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .social-media{
+    margin-top: 20px;
+    row-gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .home-main-page-left, .home-page-image-container {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .home-page-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .home-main-page-text-type1, .home-main-page-text-type2 {
+    font-size: 200%;
+    text-align: center;
+  }
+
+  .flag-hub {
+    justify-content: center;
+  }
+
+  .search-input-container {
+    width: 80%;
+  }
+
+  .social-media {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .texxt, .logoo {
+    justify-content: center;
+  }
+
+  .social-media-left, .social-media-left-last-line {
+    text-align: center;
+  }
+
+  .cursor-home-page {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-main-page-text-type1, .home-main-page-text-type2 {
+    font-size: 150%;
+    margin-bottom: 30px;
+  }
+  
+  .social-media{
+    margin-top: 20px;
+    row-gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .konnect1, .konnect2 {
+    font-size: 150%;
+  }
+
+  .social-media-left, .social-media-left-last-line {
+    font-size: 120%;
+  }
+
+  .texxt {
+    font-size: 100%;
+  }
+
+  .logoo {
+    padding: 8px 10px;
+  }
+
+  .cursor-home-page {
+    width: 80px;
+  }
 }

@@ -1,10 +1,6 @@
 .knowledgehub {
   margin-top: 60px;
-  background-image: linear-gradient(
-    to right,
-    var(--main-color1),
-    var(--main-color2)
-  );
+  background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
   background-size: cover;
   position: relative;
 }
@@ -71,11 +67,7 @@
 }
 
 .knowledge-text-type2 {
-  background-image: linear-gradient(
-    to right,
-    var(--main-color1),
-    var(--main-color2)
-  );
+  background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 180%;
@@ -107,8 +99,8 @@
 }
 
 .line1 {
-  position: absolute; /* Position the SVG absolutely */
-  top: 25%; /* Adjust the top position as needed */
+  position: absolute;
+  top: 25%;
   left: -15%;
   right: 0;
   transform: rotate(-5deg);
@@ -118,8 +110,8 @@
 
 .line2 {
   overflow: hidden;
-  position: absolute; /* Position the SVG absolutely */
-  top: 70%; /* Adjust the top position as needed */
+  position: absolute;
+  top: 70%;
   left: -15%;
   right: 0;
   transform: rotate(-5deg);
@@ -136,7 +128,7 @@
 
 .middle-part-content-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   padding: 0 5%;
   column-gap: 10%;
@@ -161,4 +153,17 @@
   font-size: 150%;
   background-color: white;
   background-image: url("../../assests/finalfinalfinal.png");
+}
+
+
+@media (max-width: 1024px) {
+ 
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 480px) {
+ 
 }

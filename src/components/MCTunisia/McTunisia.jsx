@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./mctunisia.css";
 import upperimage from "../../assests/layerlayer.png";
 import mcimage from "../../assests/MCpic.png";
 import ReactSimplyCarousel from "react-simply-carousel";
-import { useState } from "react";
 import boumiza from "../../assests/MC Pictures/boumiza.jpg";
 import mhiri from "../../assests/MC Pictures/mhiri.jpg";
 import chaima from "../../assests/MC Pictures/chaima.jpg";
@@ -21,13 +20,15 @@ import ReactGA from "react-ga4";
 
 function McTunisia() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
   useEffect(() => {
     ReactGA.send({
       hitType: "pageview",
       page: "/mc-tunisia",
       title: "MC Tunisia",
     });
-  });
+  }, []);
+
   return (
     <>
       <NavBar className="navbarr" />
@@ -42,7 +43,7 @@ function McTunisia() {
             </div>
             <div className="upper-image-container">
               <div className="circle"></div>
-              <div class="image-container">
+              <div className="image-container">
                 <img className="mc-image" src={mcimage} alt="" />
               </div>
             </div>
@@ -129,11 +130,11 @@ function McTunisia() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-arrow-right"
+                      className="bi bi-arrow-right"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                       />
                     </svg>
@@ -162,11 +163,11 @@ function McTunisia() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-arrow-left"
+                      className="bi bi-arrow-left"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
                       />
                     </svg>

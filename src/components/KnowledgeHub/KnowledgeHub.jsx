@@ -15,7 +15,8 @@ function KnowledgeHub() {
       page: `/knowledge-hub`,
       title: `Knowledge Hub`,
     });
-  });
+  }, []);
+
   return (
     <>
       <NavBar />

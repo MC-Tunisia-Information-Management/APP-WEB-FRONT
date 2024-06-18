@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import Logo from "../../assests/logo-transparent.png";
+import HamburgerIcon from "../../assests/hamburger-icon.png"; // Add the hamburger icon image
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const buttonStyle = {
-    background: "linear-gradient(to right, #ff6b6b, #556cfb)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    border: "none",
-    padding: "10px 20px",
-    fontSize: "16px",
-    cursor: "pointer",
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <>
       <section className="flex-horizontal navbar">
@@ -21,7 +19,7 @@ function NavBar() {
             <img src={Logo} alt="logo" />
           </div>
         </Link>
-        <div className="flex-horizontal navbar-content">
+        <div className={`flex-horizontal navbar-content ${isMenuOpen ? "active" : ""}`}>
           <Link
             to="/mc-tunisia"
             style={{ color: "inherit", textDecoration: "none" }}
@@ -56,6 +54,9 @@ function NavBar() {
               <div className="navbar-button-text">Contact us</div>
             </div>
           </Link>
+        </div>
+        <div className="navbar-hamburger" onClick={toggleMenu}>
+          <img src={HamburgerIcon} alt="Menu" />
         </div>
       </section>
     </>

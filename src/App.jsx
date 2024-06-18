@@ -3,7 +3,6 @@ import Home from "./components/Home/Home";
 import KnowledgeHub from "./components/KnowledgeHub/KnowledgeHub";
 import ConferenceOutputs from "./components/ConferenceOutputs/ConferenceOutputs";
 import NetworkTracker from "./components/NetworkTracker/NetworkTracker";
-import NavBar from "./components/NavBar/NavBar";
 import Application from "./components/Application/Application";
 import ContactUs from "./components/ContactUs/ContactUs";
 import McTunisia from "./components/MCTunisia/McTunisia";

@@ -135,7 +135,10 @@ function ContactUs() {
                         required
                         label={
                           <>
-                            I accept the <a href="/terms">Terms</a>
+                            I accept the{" "}
+                            <a href="https://docs.google.com/document/d/1keb_Nxeg3xIfucL4mjL8B3o3G9XQRs0yuFYGTnmqVAw/edit?usp=sharing">
+                              Terms
+                            </a>
                           </>
                         }
                       />

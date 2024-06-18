@@ -1,7 +1,44 @@
 {
     "mkt": {
         "image": "mkt.png",
-        "title": "Marketing"
+        "title": "Marketing",
+        "content": [
+            {
+                "link": "https://drive.google.com/file/d/1fihXf1WIonIDHUU3kRHG5JIfhYV80TPk/view?usp=sharing",
+                "title": "The Era of Generative AI",
+                "subtitle": "What is generative AI?"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1ZhK6k8lJHi-Eq0kiodtqn8hoeVpFWUad/view?usp=sharing",
+                "title": "Cercina AI output Book",
+                "subtitle": "A workshop our dear partners CERCINA provided about AI"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1-eGQ2m8wvPttds6YsLlTF9jz2YchsaIa/view?usp=sharing",
+                "title": "Intro to Graphic Design",
+                "subtitle": "Get to know the basics to graphic design"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1hkDuVYkw3nFGKcGnrGPDgFHC8ZQ_cvK0/view?usp=sharing",
+                "title": "How to create an AI agent",
+                "subtitle": "Get to know the basics to graphic design"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1NeRhGZYq4kx4QWVcZ_V4vT5zYTferi2k/view?usp=sharing",
+                "title": "B2B or not 2B",
+                "subtitle": "Get to know Business to business basics"
+            },
+            {
+                "link": "https://drive.google.com/file/d/1STevWd8OvVdd2eTOu4ZCVwLjUbAyqJLR/view?usp=sharing",
+                "title": "How to be Toxic in marketing",
+                "subtitle": "What does 'Toxic' marketing really mean? "
+            },
+            {
+                "link": "https://www.logos.aiesec.org/",
+                "title": "AIESEC Logos",
+                "subtitle": "A site where to find all of our logos as well as logos of our ELD programs"
+            }
+        ]
     },
     "bd": {
         "image": "bd.png",
@@ -21,7 +58,39 @@
     },
     "od": {
         "image": "od.png",
-        "title": "ORGANIZATION DEVELOPMENT"
+        "title": "ORGANIZATION DEVELOPMENT",
+        "content": [
+            {
+                "link": "https://drive.google.com/file/d/1qPh-775iMWNqnpiHl8GhaY33twUKfG7Z/view?usp=sharing",
+                "title": "Team Management",
+                "subtitle": "How to sucessfully manage a team"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1S1vYWvhFSJgTdandcelXrRTwP1P9Ipyu/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "Prioritize and Manage",
+                "subtitle": "Learn time managemnt and how to prioritize your tasks"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1QAmMbvj0d06SFd6o9UOQWSTCdoLd0T6j/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "The Invisible 'I' in Team",
+                "subtitle": "The expression of individuality in the team"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1Phs8IcN7S97fEqIy538XbvtaXXsCMir_/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "National EST",
+                "subtitle": "Get to know what it means to be part of the EST"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/1K4O-MjDqY5nHvChrcXmX0qfTQGioFent/edit?usp=sharing&ouid=104210148882106888499&rtpof=true&sd=true",
+                "title": "EST Summit Opening",
+                "subtitle": "The opening session to the EST Suummit"
+            },
+            {
+                "link": "https://docs.google.com/presentation/d/13DDxU2fiY9ZEkE78pU_0WJsXWvcH_mBd4fcu7mfvKo4/edit?usp=sharing",
+                "title": "The importance of DATA",
+                "subtitle": "NST IM Keynote about DATA and it's value"
+            }
+        ]
     },
     "ogta": {
         "title": "OUTGOING GLOBAL TALENT",

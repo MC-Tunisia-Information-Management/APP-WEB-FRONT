@@ -49,11 +49,7 @@ function HubPage() {
           {page["content"] ? (
             page["content"].map((ele, id) => {
               return (
-                <Link
-                  key={id}
-                  to="https://docs.google.com/spreadsheets/d/1flgEi9EyQl6cHoZk87KrKcmg6owssrolGR2HLMHzbIo/edit#gid=74829231"
-                  className="networktracker-card"
-                >
+                <Link key={id} to={ele.link} className="networktracker-card">
                   <div className="networktracker-card-upper card-upper-1">
                     {ele.title}
                   </div>

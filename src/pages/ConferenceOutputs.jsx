@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import "./conferenceoutputs.css";
-import upperimage from "../../assests/layerlayer.png";
-import conferenceoutputsimage from "../../assests/conferenceoutputsimage.png";
-import hexagon from "../../assests/hexagon.png";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import "../css/conferenceoutputs.css";
+import upperimage from "../assests/layerlayer.png";
+import conferenceoutputsimage from "../assests/conferenceoutputsimage.png";
+import hexagon from "../assests/hexagon.png";
 import ReactGA from "react-ga4";
 
 function ConferenceOutputs() {

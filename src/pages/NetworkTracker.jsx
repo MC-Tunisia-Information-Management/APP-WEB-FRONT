@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import "./networktracker.css";
-import upperimage from "../../assests/layerlayer.png";
-import networktrackerimage from "../../assests/networktrackerimage.png";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import "../css/networktracker.css";
+import upperimage from "../assests/layerlayer.png";
+import networktrackerimage from "../assests/networktrackerimage.png";
 import ReactGA from "react-ga4";
 
 function NetworkTracker() {

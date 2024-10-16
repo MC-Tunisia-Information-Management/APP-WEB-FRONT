@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../Footer/Footer";
-import "./contactus.css";
-import upperimage from "../../assests/layerlayer.png";
+import Footer from "../components/Footer/Footer";
+import "../css/contactus.css";
+import upperimage from "../assests/layerlayer.png";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import ReactGA from "react-ga4";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 
 function ContactUs() {
   useEffect(() => {

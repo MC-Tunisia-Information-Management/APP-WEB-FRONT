@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import "./knowledgehub.css";
-import upperimage from "../../assests/layerlayer.png";
-import folderimage from "../../assests/folderimage.png";
-import ellipse from "../../assests/Ellipse 8.png";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import "../css/knowledgehub.css";
+import upperimage from "../assests/layerlayer.png";
+import folderimage from "../assests/folderimage.png";
+import ellipse from "../assests/Ellipse 8.png";
 import { Link } from "react-router-dom";
 import ReactGA from "react-ga4";
 

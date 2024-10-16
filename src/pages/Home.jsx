@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import "./home.css";
-import NavBar from "../NavBar/NavBar";
-import homePageImage from "../../assests/home-page-image-finish.png";
-import tunisiaflag from "../../assests/tunisia.png";
-import Footer from "../Footer/Footer";
-import cursor from "../../assests/cursor.png";
+import "../css/home.css";
+import NavBar from "../components/NavBar/NavBar";
+import homePageImage from "../assests/home-page-image-finish.png";
+import tunisiaflag from "../assests/tunisia.png";
+import Footer from "../components/Footer/Footer";
+import cursor from "../assests/cursor.png";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";

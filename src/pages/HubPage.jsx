@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import "./hubPages.css";
-import upperimage from "../../assests/layerlayer.png";
-import folderimage from "../../assests/folderimage.png";
-import ellipse from "../../assests/Ellipse 8.png";
-import pages from "./HubPages";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import "../css/hubPages.css";
+import upperimage from "../assests/layerlayer.png";
+import folderimage from "../assests/folderimage.png";
+import ellipse from "../assests/Ellipse 8.png";
+import pages from "../data/HubPages";
 import { Link, useParams } from "react-router-dom";
 import ReactGA from "react-ga4";
 
@@ -19,7 +19,7 @@ function HubPage() {
       page: `/knowledge-hub/${hub}`,
       title: `${hub} Knowledge Hub`,
     });
-    setImage(require(`../../assests/${pages[hub]["image"]}`));
+    setImage(require(`../assests/${pages[hub]["image"]}`));
   }, [hub]);
   return (
     <>

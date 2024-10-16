@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import "./mctunisia.css";
-import upperimage from "../../assests/layerlayer.png";
-import mcimage from "../../assests/MCpic.png";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import "../css/mctunisia.css";
+import upperimage from "../assests/layerlayer.png";
+import mcimage from "../assests/MCpic.png";
 import ReactSimplyCarousel from "react-simply-carousel";
-import boumiza from "../../assests/MC Pictures/boumiza.jpg";
-import mhiri from "../../assests/MC Pictures/mhiri.jpg";
-import chaima from "../../assests/MC Pictures/chaima.jpg";
-import hamma from "../../assests/MC Pictures/hamma.jpg";
-import azmi from "../../assests/MC Pictures/azmi.jpg";
-import boughi from "../../assests/MC Pictures/boughi.jpg";
-import lamis from "../../assests/MC Pictures/lamis.jpg";
-import nacef from "../../assests/MC Pictures/nacef.jpg";
-import slim from "../../assests/MC Pictures/slim.jpg";
-import hiba from "../../assests/MC Pictures/hiba.jpg";
-import eya from "../../assests/MC Pictures/eya.jpg";
+import boumiza from "../assests/MC Pictures/boumiza.jpg";
+import mhiri from "../assests/MC Pictures/mhiri.jpg";
+import chaima from "../assests/MC Pictures/chaima.jpg";
+import hamma from "../assests/MC Pictures/hamma.jpg";
+import azmi from "../assests/MC Pictures/azmi.jpg";
+import boughi from "../assests/MC Pictures/boughi.jpg";
+import lamis from "../assests/MC Pictures/lamis.jpg";
+import nacef from "../assests/MC Pictures/nacef.jpg";
+import slim from "../assests/MC Pictures/slim.jpg";
+import hiba from "../assests/MC Pictures/hiba.jpg";
+import eya from "../assests/MC Pictures/eya.jpg";
 import ReactGA from "react-ga4";
 
-function McTunisia() {
+function MC() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
@@ -281,4 +281,4 @@ function McTunisia() {
   );
 }
 
-export default McTunisia;
+export default MC;

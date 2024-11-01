@@ -8,11 +8,12 @@
     justify-content: space-between;
     padding-left: 2%;
     padding-right: 2%;
-    background: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    background: var(--main-color1);
     color: white;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
+
     display: flex;
     align-items: center;
     z-index: 1000;
@@ -22,10 +23,12 @@
     flex: 70%;
     justify-content: right;
     padding-right: 7%;
-    column-gap: 30px;
     height: 100%;
     align-items: center;
     display: flex;
+    gap:4%;
+
+
 }
 
 .navbar-logo {
@@ -43,92 +46,96 @@
 }
 
 .navbar-button {
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35px; /* Adjust height as needed */
     width: 110px;
-    border-radius: 30px;
+    /*border-radius: 30px;*/
     cursor: pointer;
+    margin-left: 120px; /* Add margin to the button container for spacing */
+
 }
 
-.navbar-button-text {
-    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 2px;
-    padding-right: 1px;
-}
+/*
+user profile icon 
+.navbar-button i {
+    margin-right: 5px;
+    font-size: 1.2rem; 
+}*/
+
+
 
 /* Hide hamburger on large screens */
 .navbar-hamburger {
     display: none;
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    .navbar-content {
-        display: none; /* Hide the navbar content initially */
-    }
 
-    .navbar-hamburger {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
 
-    .navbar-hamburger img {
-        width: 30px;
-        height: 30px;
-    }
 
-    .navbar-content.active {
-        display: flex; /* Show the navbar content when active */
-        flex-direction: column;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #333;
-        overflow-y: auto;
-        padding: 10px 0;
-        z-index: 999;
-    }
+/* Styling for the main sub-menu */
+.knowledge-hub-menu {
+    position: relative;
 
-    .navbar-content a {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+    display: inline-block;
+  }
+  
+  .sub-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%;
+    left: 0;
 
-    .navbar-button-container {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 10px;
-    }
+    z-index: 1;
+    min-width: 140px;
+    padding: 10px;
+  }
+  
+  .knowledge-hub-menu:hover .sub-menu {
+    display: block; /* Show on hover */
+  }
+  
+  .sub-menu-item {/*fornt and back office*/
+    padding: 8px 12px;
+    background:var(--main-color1);
+    cursor: pointer;
+
+    position: relative;
+  }
+  
+ 
+  
+  /* Nested sub-menu */
+  .nested-sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 150px; /* Adjust distance from the parent menu */
+    background:var(--main-color1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    min-width: 180px;
+    height: 50px;
+  }
+  
+  .sub-menu-item:hover .nested-sub-menu {
+    display: block; /* Show nested sub-menu on hover */
+
+  }
+  
+  .nested-sub-menu .sub-menu-item {
+    padding: 8px 12px;
+    color: white;
+  }
+  
+  .nested-sub-menu .sub-menu-item:hover {
+    background-color: #dedcdc;
 }
 
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: row;
-        height: auto;
-        padding: 10px 0;
-    }
 
-    .navbar-logo {
-        flex: none;
-    }
 
-    .navbar-hamburger {
-        align-self: flex-end;
-        margin-right: 20px;
-    }
 
-    .navbar-content.active {
-        display: flex; /* Show the navbar content when active */
-    }
-}
+
+
+

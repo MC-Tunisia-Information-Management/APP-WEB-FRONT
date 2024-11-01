@@ -18,7 +18,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/mc-tunisia" element={<MC />} />
+          <Route path="/mc-tunisia" element={<McTunisia />} />
           <Route path="/knowledge-hub/:hub" element={<HubPage />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
           <Route path="/network-trackers" element={<NetworkTracker />} />

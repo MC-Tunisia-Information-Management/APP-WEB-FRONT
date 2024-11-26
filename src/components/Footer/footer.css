@@ -1,24 +1,92 @@
-.footer{
-    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
-    height: 35vh;
-    display: flex;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligning items to the top */
+  background-color: var(--main-color1);
+  padding: 60px 150px ; /* Adjusted padding for a larger footer */
+  font-family: Arial, sans-serif;
+  position: relative;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.footer-text {
+  text-align: left;
+  font-size: 16px; /* Increased text size */
+  line-height: 1.5; /* Adjusted line height for better readability */
+  width: 30%; /* Adjusted width for better alignment */
+  color: var(--main-color2);
+}
+
+.footer-links {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjusted gap between links */
+  width: 30%; /* Adjusted width for better alignment */
+}
+
+.footer-links a {
+  font-size: 16px; /* Font size for the links */
+  color: var(--main-color2);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px; /* Increased gap between icons */
+  position: absolute;
+  bottom: 20px; /* Adjusted position for social media icons */
+}
+
+.footer-logo {
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+}
+
+.follow-us {
+  font-size: 18px;
+  margin-right: 15px;
+  color: var(--main-color2);
+  position: relative;
+}
+
+
+.footer-social svg {
+  font-size: 24px; /* Size of social media icons */
+  color: var(--main-color2);
+}
+
+.footer-social svg:hover {
+  color: var(--main-color1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
-    flex-direction: row;
-    padding-left: 7%;
-    padding-right: 22%;
-    justify-content: space-between;
-    font-family: "Lato", sans-serif;
-    font-style: normal;
-    color: white;
-    line-height: 1.5;
-    font-size: 15px;
-}
-
-.aiesec-org-link{
-    text-decoration: none;
-    color: inherit;
-}
-
-.word-aiesec-link{
-    text-decoration: underline;
+    padding: 10px;
+  }
+  
+  .footer-text, .footer-links {
+    width: 80%; /* Adjust width on smaller screens */
+    margin-bottom: 20px;
+  }
+  
+  .footer-social {
+    position: relative;
+    justify-content: center;
+    bottom: 0;
+    margin-top: 20px;
+  }
+  
+  .footer-logo {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }

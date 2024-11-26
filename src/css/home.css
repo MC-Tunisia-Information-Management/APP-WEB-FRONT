@@ -12,15 +12,6 @@
   justify-content: center;
 }
 
-.flag-hub {
-  display: flex;
-}
-
-.home-page-flag {
-  width: 146px;
-  height: 60px;
-  margin-left: 30px;
-}
 
 .home-main-page-left {
   width: 45%;
@@ -37,7 +28,7 @@
 /* Hero Section Styles */
 .hero-section {
   position: relative;
-  height: 60vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -54,7 +45,7 @@
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 5vw;
   font-weight: bold;
 }
 
@@ -72,7 +63,7 @@
 
 .hero-image {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   object-fit: cover;
 }
 
@@ -81,24 +72,16 @@
   color: white;
 }
 
+.wave-container{
+  background-image: url("../assests/BackgroundMain.png");
+  background-size: cover;
+  height: 400px  ;
+  align-items: center;
 
-
-
-
-
-.search {
-  background-image: linear-gradient(
-    to right,
-    var(--main-color1),
-    var(--main-color2)
-  );
-  height: 60vh;
 }
 
-.search-container {
-
-  
-  height: 100%;
+.search-container { 
+  height: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +92,7 @@
 .konnect1 {
   font-family: konnect, sans-serif;
   font-style: normal !important;
-  color: white;
+  color: var(--main-color1);
   font-weight: 200;
   font-size: 200%;
 }
@@ -117,11 +100,9 @@
 .konnect2 {
   font-family: konnect, sans-serif;
   font-weight: 700;
-  color: white;
+  color: var(--main-color3);
   font-size: 250%;
 }
-
-
 
 .search-input-container {
   margin-top: 5px;
@@ -132,119 +113,7 @@
   background-color: rgb(255, 255, 255);
   width: 100%;
   height: 30px;
-  border: none;
+  border: solid var(--main-color1);
   border-radius: 15px;
   padding-left: 20px;
-}
-
-.social-media-left {
-  font-family: "Holtwood One SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  background-image: linear-gradient(
-    to right,
-    var(--main-color1),
-    var(--main-color2)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 150%;
-  line-height: 1.3;
-}
-
-
-.flex-horizontal {
-  display: flex;
-  align-items: center;
-}
-
-.texxt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  padding-left: 20px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  background-color: red;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  height: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-  .home-main-page {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 50px;
-  }
-
-  
-  .hero-text {
-    font-size: 1.8rem;
-  }
-
-  .hero-section {
-    height: 50vh;
-  }
- 
-  .flag-hub {
-    justify-content: center;
-  }
-
-  .search-input-container {
-    width: 80%;
-  }
-
-
-
-  .texxt, .logoo {
-    justify-content: center;
-  }
-
- 
-
-  
-}
-
-@media (max-width: 480px) {
-  .home-main-page-text-type1, .home-main-page-text-type2 {
-    font-size: 150%;
-    margin-bottom: 30px;
-  }
-  
-  .hero-text {
-    font-size: 1.5rem;
-  }
-
-  .hero-section {
-    height: 40vh;
-  }
-
-
-  .konnect1, .konnect2 {
-    font-size: 150%;
-  }
-
-  
-
-  .texxt {
-    font-size: 100%;
-  }
-
-  .logoo {
-    padding: 8px 10px;
-  }
-
- 
 }

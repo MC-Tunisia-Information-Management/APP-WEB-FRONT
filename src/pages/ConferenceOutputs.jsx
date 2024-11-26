@@ -4,7 +4,6 @@ import Footer from "../components/Footer/Footer";
 import "../css/conferenceoutputs.css";
 import upperimage from "../assests/layerlayer.png";
 import conferenceoutputsimage from "../assests/conferenceoutputsimage.png";
-import hexagon from "../assests/hexagon.png";
 import ReactGA from "react-ga4";
 
 function ConferenceOutputs() {
@@ -51,7 +50,7 @@ function ConferenceOutputs() {
                   src={conferenceoutputsimage}
                   alt=""
                 />
-                <img className="hex-image" src={hexagon} alt="" />
+                {/* <img className="hex-image" src={hexagon} alt="" /> */}
               </div>
             </div>
           </div>

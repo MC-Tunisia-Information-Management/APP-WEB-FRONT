@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
-import "../css/home.css";
-import NavBar from "../components/NavBar/NavBar";
-import homePageImage from "../assests/home-page-image-finish.png";
-import tunisiaflag from "../assests/tunisia.png";
-import Footer from "../components/Footer/Footer";
-import cursor from "../assests/cursor.png";
-import { AiFillFacebook } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
+import "./home.css";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 import ReactGA from "react-ga4";
 import Slider from "react-slick";
 import cover_1 from "../../assests/Pictures/cover_1.png";
@@ -65,7 +59,13 @@ function Home() {
         </Slider>
       </div>
 
-      <div className="wave-container">
+      
+
+      {/* Search Section */}
+      <div className="search">
+        <div></div>
+        <div></div>
+        <div className="wave-container">
             <svg
               className="wave"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,11 +78,6 @@ function Home() {
               ></path>
           </svg>
           </div>
-
-      {/* Search Section */}
-      <div className="search">
-        <div></div>
-        <div></div>
         <div className="search-container">
           <div>
             <div className="konnect1">CAN'T FIND SOMETHING?</div>

@@ -1,141 +1,205 @@
-/* Original styles */
+/* Adjustments for Navbar */
 .navbar {
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
-    background: var(--main-color1);
-    color: white;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  height: 60px;
+  background: var(--main-color2);
+  color: var(--main-color1);
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 1px  1px rgba(0, 0, 0, 0.1)  ;
 }
 
 .navbar-content {
-    flex: 70%;
-    justify-content: right;
-    padding-right: 7%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    gap:4%;
-
-
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 4%;
 }
 
-.navbar-logo {
-    display: flex;
-    flex: 15%;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 15%;
+.navbar-logo, .navbar-button-container {
+  flex: 0.15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px; /* Adjust height as needed */
-    width: 110px;
-    /*border-radius: 30px;*/
-    cursor: pointer;
-    margin-left: 120px; /* Add margin to the button container for spacing */
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  margin-left: 10px; /* Adjust margin as needed */
 }
 
-/*
-user profile icon 
-.navbar-button i {
-    margin-right: 5px;
-    font-size: 1.2rem; 
-}*/
-
-
-
-/* Hide hamburger on large screens */
+/* Show hamburger only on small screens */
 .navbar-hamburger {
-    display: none;
+  display: none;
 }
 
-
-
-
-/* Styling for the main sub-menu */
-.knowledge-hub-menu {
-    position: relative;
-
-    display: inline-block;
+@media (max-width: 768px) {
+  .navbar-content {
+    display: none; /* Hide menu on small screens */
   }
-  
-  .sub-menu {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%;
-    left: 0;
 
-    z-index: 1;
-    min-width: 140px;
-    padding: 10px;
-  }
-  
-  .knowledge-hub-menu:hover .sub-menu {
-    display: block; /* Show on hover */
-  }
-  
-  .sub-menu-item {/*fornt and back office*/
-    padding: 8px 12px;
-    background:var(--main-color1);
+  .navbar-hamburger {
+    display: block; /* Show hamburger */
     cursor: pointer;
-
-    position: relative;
   }
-  
- 
-  
-  /* Nested sub-menu */
+
+  .navbar-content.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--main-color2);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  /* Adjust navbar content links to be more responsive */
+  .navbar-content a {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+    color: var(--main-color1);
+    text-decoration: none;
+  }
+  .navbar .knowledge-hub-menu.active .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Make it full width on mobile */
+    margin-top: 5px;
+    border-top: 1px solid var(--main-color1); /* Border for separation */
+  }
+
+  /* Submenu item padding and styles on mobile */
+  .knowledge-hub-menu .sub-menu-item {
+    padding: 12px;
+    color: var(--main-color1);
+    font-size: 16px;
+  }
+
+  .sub-menu-item:hover {
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
+
+  /* Nested submenu styles on mobile */
   .nested-sub-menu {
     display: none;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 150px; /* Adjust distance from the parent menu */
-    background:var(--main-color1);
+    left: 0;
+    background: var(--main-color2);
+    min-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    min-width: 180px;
-    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
-  
-  .sub-menu-item:hover .nested-sub-menu {
-    display: block; /* Show nested sub-menu on hover */
 
+  .sub-menu-item:hover .nested-sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
   }
-  
+
   .nested-sub-menu .sub-menu-item {
-    padding: 8px 12px;
-    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
   }
-  
+
   .nested-sub-menu .sub-menu-item:hover {
-    background-color: #dedcdc;
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
+
+  /* Show submenu on tap for mobile */
+  .navbar .knowledge-hub-menu.active .sub-menu-item {
+    cursor: pointer;
+  }
+
+  /* Ensure that all submenus are clickable */
+  .navbar .knowledge-hub-menu.active .sub-menu-item.active {
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
 }
 
+/* Knowledge Hub Main Menu */
+.knowledge-hub-menu {
+  position: relative;
+}
 
+/* Submenu hidden by default */
+.navbar .knowledge-hub-menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  min-width: 150px;
+  background: var(--main-color2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+/* Show submenu when hovering over the Knowledge Hub menu */
+.navbar .knowledge-hub-menu:hover .sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 
+.knowledge-hub-menu .sub-menu-item {
+  padding: 8px;
+  background: var(--main-color2);
+  color: var(--main-color1);
+  cursor: pointer;
+  position: relative;
+}
 
+.sub-menu-item:hover {
+  background-color: var(--main-color1);
+  color: var(--main-color2);
+}
 
+/* Nested submenu styles */
+.nested-sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 150px;
+  background: var(--main-color2);
+  min-width: 240px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+.sub-menu-item:hover .nested-sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nested-sub-menu .sub-menu-item {
+  padding: 0px 15px;
+  color: var(--main-color1);
+}
+
+.nested-sub-menu .sub-menu-item:hover {
+  background-color: var(--main-color1);
+  color: var(--main-color2);
+}

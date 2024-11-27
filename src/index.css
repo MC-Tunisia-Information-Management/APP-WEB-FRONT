@@ -75,9 +75,11 @@ code {
 }
 
 :root {
-  --main-color1: #1D64F2;
+  /* --main-color1: #477DEE; */
+  --main-color1: #387ADF;
 
-  --main-color2: #50c4ed;
+  --main-color2: white;
+  --main-color3: #FB5546;
   --red: #e70013;
 }
 .flex-vertical {

@@ -9,10 +9,6 @@
     width: 100%;
 }
 
-.navbar {
-    z-index: 2;
-}
-
 .networktracker-upper {
     position: relative;
     height: 91vh;

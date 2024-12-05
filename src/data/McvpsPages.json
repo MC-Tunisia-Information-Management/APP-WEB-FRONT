@@ -1,0 +1,25 @@
+[
+    {
+      "name": "Yosr Akrout",
+      "currentPosition": "MCVP Information Management",
+      "picture": "MCP.png", 
+      "journey": [
+        { "position": "Member", "description": "LC RUSPINA.", "side": "left" },
+        { "position": "Team Leader", "description": "IGV Department", "side": "right" },
+        { "position": "Vice President", "description": "IGV Department", "side": "left" },
+        { "position": "MCVP", "description": "Information Management", "side": "right" }
+      ]
+    },
+    {
+      "name": "Jane Smith",
+      "currentPosition": "MCVP Marketing",
+      "picture": "../../assests/Pictures/21.jpg", 
+      "journey": [
+        { "position": "Member", "description": "LC RUSPINA.", "side": "left" },
+        { "position": "Team Leader", "description": "Marketing Department", "side": "right" },
+        { "position": "Vice President", "description": "Marketing Department", "side": "left" },
+        { "position": "MCVP", "description": "Marketing Management", "side": "right" }
+      ]
+    }
+  ]
+  

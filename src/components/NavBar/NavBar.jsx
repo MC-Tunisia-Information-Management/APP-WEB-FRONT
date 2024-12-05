@@ -63,13 +63,50 @@ function NavBar() {
                 </Link>
               </div>
             </div>
-          </Link>
+
+            {/* Front Office with nested sub-menu */}
+            <div className="sub-menu-item">
+              Front Office
+              <div className="nested-sub-menu">
+                <Link to="/knowledge-hub/ogta" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Outgoing Global Talent</div>
+                </Link>
+                <Link to="/knowledge-hub/ogte" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Outgoing Global Teacher</div>
+                </Link>
+                <Link to="/knowledge-hub/ogv" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Outgoing Global Volunteer</div>
+                </Link>
+                <Link to="/knowledge-hub/igta" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Incoming Global Talent</div>
+                </Link>
+                <Link to="/knowledge-hub/igte" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Incoming Global Teacher</div>
+                </Link>
+                <Link to="/knowledge-hub/igv" style={{ color: "inherit", textDecoration: "none" }}>
+                  <div className="sub-menu-item flex-horizontal navbar">Incoming Global Volunteer</div>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="navbar-hamburger" onClick={toggleMenu}>
-          <img src={HamburgerIcon} alt="Menu" />
-        </div>
-      </section>
-    </>
+
+        <Link to="/network-trackers" style={{ color: "inherit", textDecoration: "none" }}>
+          <div>Network Tools</div>
+        </Link>
+        <Link to="/conference-outputs" style={{ color: "inherit", textDecoration: "none" }}>
+          <div>Conference Outputs</div>
+        </Link>
+
+        <Link to="/contact-us" style={{ color: "inherit", textDecoration: "none" }}>
+          <div>Contact Us</div>
+        </Link>
+      </div>
+
+      <div className="navbar-hamburger navbar-button-container" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+    </section>
   );
 }
 

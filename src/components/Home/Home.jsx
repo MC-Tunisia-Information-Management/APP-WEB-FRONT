@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./home.css";
+import "../../css/home.css";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import ReactGA from "react-ga4";

@@ -28,6 +28,9 @@ import MCHive from "../assests/PreviousMCs/hive.png";
 import ReactGA from "react-ga4";
 import Slider from "react-slick";
 
+import { Link } from "react-router-dom";  
+
+
 function MC() {
   // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
@@ -175,8 +178,12 @@ function MC() {
                 className="team-member-img"
                 />
               <div className="team-member-info">
-                <h4>{member.name}</h4>
-                <p>{member.position}</p>
+              <h4>
+              <Link to={`/mcvp/${index}`} className="team-member-link">
+                    {member.name}
+                    </Link>
+                  </h4>
+                  <p>{member.position}</p>
               </div>
             </div>
           ))}

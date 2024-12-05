@@ -16,11 +16,14 @@
 /* Roadmap container */
 .roadmap-container {
     position: relative;
-    width: 80%; /* Adjust width to center */
+    width: 100%; /* Adjust width to center */
     margin: 0 auto; /* Center the container */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("../../assests/BackgroundMainBig.png");
+
+
 }
 
 /* Vertical line */

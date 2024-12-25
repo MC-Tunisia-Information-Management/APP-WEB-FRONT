@@ -41,10 +41,93 @@
   font-family: 'konnect', 'sans-serif';
 }
 
-.mc-history {
-  margin-top: 40px;
+.MC-way{
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: justify;
+  font-family: 'konnect', 'sans-serif';
+  color:var(--main-color1);
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* Gives the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flips the card */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 250px; /* Set a minimum height to prevent the card from becoming too small */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 22px;
+  padding: 20px;
+  margin: 0; /* Remove extra margin */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Prevent content overflow */
+  box-sizing: border-box; /* Include padding in the element's total size */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: auto; /* Let the card adjust its height based on content */
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+  .flip-card-front, .flip-card-back {
+    padding: 15px; /* Adjust padding for mobile */
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+}
+
+
+.flip-card-front {
+  background-color: var(--main-color2);
+}
+
+.flip-card-back {
+  background-color: var(--main-color1);
+  transform: rotateY(180deg);
+}
+
+
+.mc-history {
+  margin-top: 40px;
+  height: 500px;
+}
+.mc-history-1 {
+  margin: 40px 0px;
+  height: 250px;
+}
+
+  
 .mc-history-text {
   text-align: center;
   font-weight: bold;
@@ -55,14 +138,16 @@
 
 .mc-history-container {
   background-color: var(--main-color2);
-  height: 400px;
+  height: 350px;
+  text-align:justify;
+  font-size: 22px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.8s;
 }
 
 .mc-history-container:hover {
@@ -91,6 +176,15 @@ hr {
     height: auto;
     padding: 15px;
   }
+  
+.mc-history {
+  margin-top: 40px;
+  height: 1700px;
+}
+.mc-history-1 {
+  margin-top: 40px;
+  height: 500px;
+}
 }
 
 .mc-team-bloc {
@@ -152,22 +246,24 @@ hr {
 }
 
 .slick-prev {
-  left: -40px; /* Adjust position for previous arrow */
+  left: 30px; /* Adjust position for previous arrow */
+  z-index: 10;
 }
 
 .slick-next {
-  right: -30px; /* Adjust position for next arrow */
+  right: 30px; /* Adjust position for next arrow */
+
 }
 
 /* Optional: Style the arrows */
 .slick-prev::before, .slick-next::before {
   font-size: 30px; /* Adjust arrow icon size */
-  color: var(--main-color2); /* Adjust the arrow color */
+  color: var(--main-color1); /* Adjust the arrow color */
   
 }
 
 .slick-prev:hover, .slick-next:hover {
-  color: var(--main-color2); /* Change color on hover */
+  color: var(--main-color1); /* Change color on hover */
   
 }
 

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import ConferenceOutputs from "./pages/ConferencesOutputsPage";
 import NetworkTracker from "./pages/NetworkTracker";
@@ -23,7 +23,6 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/mc-tunisia" element={<MC />} />
           <Route path="/knowledge-hub/:hub" element={<HubPage />} />

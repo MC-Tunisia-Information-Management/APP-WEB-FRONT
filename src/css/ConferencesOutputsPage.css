@@ -1,0 +1,138 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.conference-page {
+  text-align: center;
+}
+
+
+
+/* Header Section */
+.header {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 400px;
+
+}
+
+.header-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+
+
+/* Conference Section */
+.conference-section {
+  background: #f9f9f9;
+  padding: 20px 0px;
+}
+
+conference-section h2 {
+  font-size: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.conference-section h2::after {
+  content: "";
+  display: block;
+  width: 80px; /* Line width */
+  height: 2px; /* Line thickness */
+  background: black; /* Line color */
+  margin: 10px auto 0; /* Center the line */
+}
+
+.conference-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+
+/* Add a subtle overlay to improve text visibility */
+.conference-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1;
+}
+
+.conference-card h3 {
+  position: relative;
+  z-index: 2;
+  color :white;
+  margin: 0 0 10px 0; /* Add spacing below the title */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure even and odd alignments work with this structure */
+.conference-card {
+  display: flex;
+  flex-direction: column; /* Stack title and buttons vertically */
+  justify-content: flex-start; /* Align items from the top */
+  align-items: center; /* Center align contents */
+  padding: 20px; /* Add spacing inside the card */
+  position: relative;
+}
+
+/* Alternate Text Alignment: Odd Cards (Left) */
+.conference-card:nth-child(odd) {
+  justify-content: flex-start; /* Align text to the left */
+  text-align: left;
+  padding : 50px;
+  padding-top: 200px;
+}
+
+/* Alternate Text Alignment: Even Cards (Right) */
+.conference-card:nth-child(even) {
+  justify-content: flex-end; /* Align text to the right */
+  text-align: right;
+  padding-top: 200px;
+  padding-right: 50px;
+
+}
+
+
+/* Conference Buttons Container */
+.conference-buttons {
+  margin-top: 20px; /* Adjust the spacing between the title and buttons */
+  display: flex;
+  justify-content: center; /* Center align the buttons */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Ensure buttons wrap to a new line if they don't fit */
+  position: relative; /* Maintain relative positioning under the title */
+  z-index: 2; /* Ensure it stays above the background overlay */
+}
+
+/* Individual Buttons */
+.conference-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #2078d6;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.conference-button:hover {
+  background-color: #9fb1fa;
+}

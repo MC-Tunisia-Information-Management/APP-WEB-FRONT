@@ -1,161 +1,175 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
-import "../css/knowledgehub.css";
-import upperimage from "../assests/layerlayer.png";
-import folderimage from "../assests/folderimage.png";
-import ellipse from "../assests/Ellipse 8.png";
+import "../css/knowledgehub.css"; // Ensure this file includes styling for the updated layout
 import { Link } from "react-router-dom";
 import ReactGA from "react-ga4";
+/*import mcimage from "../assests/MC HUSTLE/MC Hustle.jpg";*/
+import MaktIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/makt.png";
+import BDIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/BDD..png";
+import ECIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/ecb.png";
+import ODIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/OD..png";
+import TMtIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/TM..png";
+import FIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/FF.png";
+import knowledge from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/KNOWLEDGE.jpg";
 
-function KnowledgeHub() {
+const KnowledgeHubBanner = () => {
   useEffect(() => {
     ReactGA.send({
       hitType: "pageview",
-      page: `/knowledge-hub`,
-      title: `Knowledge Hub`,
+      page: "/knowledge-hub",
+      title: "Knowledge Hub",
     });
   }, []);
 
   return (
     <>
       <NavBar />
+      {/* Banner Section */}
+      <div className="banner">
+            <img
+              src={knowledge}
+              alt={`Hero Slide`}
+              className="hero-image"
+            />
+      </div>
+
       <section className="knowledgehub">
-        <div className="knowledgehub-upper">
-          <div>
-            <img className="upperimage" src={upperimage} alt="" />
-          </div>
-          <div className="knowledgehub-upper-text-image-container">
-            <div className="upper-text-container">
-              <div className="knowledge-text-type1">KNOWLEDGE</div>
-              <div className="flex-horizontal hubhub">
-                <div className="knowledge-text-type1">HUB</div>
-                <div className="knowledge-text-type2-container">
-                  <div className="knowledge-text-type2">EVERYTHING YOU</div>
-                  <div className="knowledge-text-type2">NEED IN ONE PLACE.</div>
-                </div>
+        {/* Back Office Section */}
+        <div className="back-office-section">
+          <h2 className="back-office-title">The Back Office</h2>
+          <div className="departments-grid">
+            {/* Example Department Card */}
+            <div className="department">
+              <img src={MaktIcon} alt="mkt" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">Marketing</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/mkt" className="read-more">Read more</a>
               </div>
             </div>
-            <div className="upper-image-container">
-              <div>
-                <img className="folder-image" src={folderimage} alt="" />
+
+            {/* Other Department Cards */}
+            <div className="department">
+              <img src={BDIcon} alt="BD Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">BD</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/bd" className="read-more">Read more</a>
               </div>
-              <img className="ellips-image" src={ellipse} alt="" />
+            </div>
+
+            <div className="department">
+              <img src={FIcon} alt="F&L Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">F&L</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/fnl" className="read-more">Read more</a>
+              </div>
+            </div>
+
+            <div className="department">
+              <img src={TMtIcon} alt="TM Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">TM</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/tm" className="read-more">Read more</a>
+              </div>
+            </div>
+            <div className="department">
+              <img src={ECIcon} alt="TM Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">ECB</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/ecb" className="read-more">Read more</a>
+              </div>
+            </div>
+            <div className="department">
+              <img src={ODIcon} alt="TM Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">OD</h3>
+                <p className="department-description">
+                  Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...
+                </p>
+                <a href="/knowledge-hub/od" className="read-more">Read more</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="middle-container">
-          <div className="middle-part-title">THE BACK OFFICE</div>
-          <div className="middle-part-content-container">
-            <Link to="/knowledge-hub/mkt" className="card">
-              MARKETING
-            </Link>
-            <Link to="/knowledge-hub/bd" className="card">
-              BUSINESS DEVELOPMENT
-            </Link>
-            <Link to="/knowledge-hub/fnl" className="card">
-              FINANCE & LEGALITIES
-            </Link>
-            <Link to="/knowledge-hub/tm" className="card">
-              TALENT MANAGEMENT
-            </Link>
-            <Link to="/knowledge-hub/ecb" className="card">
-              ENTITY CONTROL BOARD
-            </Link>
-            <Link to="/knowledge-hub/od" className="card">
-              ORGANIZATIONAL DEVELOPMENT
-            </Link>
-          </div>
-          <svg
-            width="1740"
-            className="line1"
-            height="240"
-            viewBox="0 0 1740 240"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
-              stroke="white"
-              strokeWidth="10"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <svg
-            width="1740"
-            className="line2"
-            height="240"
-            viewBox="0 0 1740 240"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
-              stroke="white"
-              strokeWidth="10"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+        {/* Front Office Section */}
+        <div className="front-office-section">
+          <h2 className="front-office-title">The Front Office</h2>
+          <div className="departments-grid">
+            {/* Example Front Office Card */}
+            <div className="department">
+              <img src="path-to-igt-icon.png" alt="IGT Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">IGTa</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/igta" className="read-more">Read more</a>
+              </div>
+            </div>
 
-        <div className="middle-container">
-          <div className="middle-part-title">THE FRONT OFFICE</div>
-          <div className="middle-part-content-container">
-            <Link to="/knowledge-hub/ogta" className="card">
-              OUTGOING GLOBAL TALENT
-            </Link>
-            <Link to="/knowledge-hub/ogte" className="card">
-              OUTGOING GLOBAL TEACHER
-            </Link>
-            <Link to="/knowledge-hub/ogv" className="card">
-              OUTGOING GLOBAL VOLUNTEER
-            </Link>
-            <Link to="/knowledge-hub/igta" className="card">
-              INCOMING GLOBAL TALENT
-            </Link>
-            <Link to="/knowledge-hub/igte" className="card">
-              INCOMING GLOBAL TEACHER
-            </Link>
-            <Link to="/knowledge-hub/igv" className="card">
-              INCOMING GLOBAL VOLUNTEER
-            </Link>
+            <div className="department">
+              <img src="path-to-icv-icon.png" alt="ICV Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">IGte</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/igte" className="read-more">Read more</a>
+              </div>
+            </div>
+            <div className="department">
+              <img src="path-to-icv-icon.png" alt="ICV Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">IGV</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/igv" className="read-more">Read more</a>
+              </div>
+            </div>
+            <div className="department">
+              <img src="path-to-icv-icon.png" alt="ICV Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">OGV</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/ogv" className="read-more">Read more</a>
+              </div>
+            </div>
+
+            <div className="department">
+              <img src="path-to-ogv-icon.png" alt="OGV Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">OGTa</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/ogta" className="read-more">Read more</a>
+              </div>
+            </div>
+
+            <div className="department">
+              <img src="path-to-ogt-icon.png" alt="OGT Icon" className="department-icon" />
+              <div className="department-content">
+                <h3 className="department-title">OGTe</h3>
+                <p className="department-description">Lorem Ipsum est simplement du faux texte employé dans la Le Lorem Ipsum est le faux texte standard de...</p>
+                <a href="/knowledge-hub/ogte" className="read-more">Read more</a>
+              </div>
+            </div>
           </div>
-          <svg
-            width="1740"
-            className="line1"
-            height="240"
-            viewBox="0 0 1740 240"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
-              stroke="white"
-              strokeWidth="10"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <svg
-            width="1740"
-            className="line2"
-            height="240"
-            viewBox="0 0 1740 240"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-25 237.644C-25 237.644 700 -100 1000 50C1300 200 2000 137.553 2000 137.553"
-              stroke="white"
-              strokeWidth="10"
-              strokeLinejoin="round"
-            />
-          </svg>
         </div>
       </section>
+
       <Footer />
     </>
   );
-}
+};
 
-export default KnowledgeHub;
+export default KnowledgeHubBanner;

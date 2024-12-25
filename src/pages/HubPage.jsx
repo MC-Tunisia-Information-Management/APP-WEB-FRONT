@@ -2,79 +2,78 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import "../css/hubPages.css";
-import upperimage from "../assests/layerlayer.png";
-import folderimage from "../assests/folderimage.png";
-import ellipse from "../assests/Ellipse 8.png";
 import pages from "../data/HubPages";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 function HubPage() {
-  let { hub } = useParams();
-  let [page] = useState(pages[hub]);
-  let [image, setImage] = useState("");
+  const { hub } = useParams();
+  const [page, setPage] = useState(null);
+  const [image, setImage] = useState("");
+
   useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      page: `/knowledge-hub/${hub}`,
-      title: `${hub} Knowledge Hub`,
-    });
-    setImage(require(`../assests/${pages[hub]["image"]}`));
+    if (pages[hub]) {
+      const hubPage = pages[hub];
+      setPage(hubPage);
+
+      try {
+        const img = require(`../assests/${hubPage.image}`);
+        setImage(img);
+      } catch (error) {
+        console.error(`Error loading image: ${hubPage.image}`, error);
+        setImage(""); // Fallback to an empty image or placeholder if needed
+      }
+
+      ReactGA.send({
+        hitType: "pageview",
+        page: `/knowledge-hub/${hub}`,
+        title: `${hub} Knowledge Hub`,
+        customProps: { side: hubPage.side },
+      });
+    }
   }, [hub]);
+
+  if (!page) {
+    return <div>Page not found</div>;
+  }
+
   return (
     <>
       <NavBar />
-      <section className="knowledgehub">
-        <div className="knowledgehub-upper">
-          <div>
-            <img className="upperimage" src={upperimage} alt="" />
-          </div>
-          <div className="knowledgehub-upper-text-image-container">
-            <div className="upper-text-container">
-              <div className="knowledge-text-type1">{pages[hub].title}</div>
-              <div className="flex-horizontal hubhub">
-                <div className="knowledge-text-type1">HUB</div>
-                <div className="knowledge-text-type2-container"></div>
-              </div>
-            </div>
-            <div className="upper-image-container">
-              <div>
-                <img className="folder-image" src={image} alt="" />
-              </div>
-              <img className="ellips-image" src={ellipse} alt="" />
-            </div>
-          </div>
+      <div className="hub-page-hero row">
+        <div className="hub-page-hero-left-half col-md-6 col-sm-12 p-5">
+          <div className="hub-page-hero-side">{page.side}</div>
+          <div className="hub-page-hero-title">{page.title}</div>
         </div>
-        <div className="networktracker-content-container">
-          {page["content"] ? (
-            page["content"].map((ele, id) => {
-              return (
-                <Link key={id} to={ele.link} className="networktracker-card">
-                  <div className="networktracker-card-upper card-upper-1">
-                    {ele.title}
-                  </div>
-                  <div className="networktracker-card-title card-title-1">
-                    {ele.subtitle}
-                  </div>
-                </Link>
-              );
-            })
-          ) : (
-            <></>
-          )}
-          {/* <Link
-            to="https://docs.google.com/spreadsheets/d/1flgEi9EyQl6cHoZk87KrKcmg6owssrolGR2HLMHzbIo/edit#gid=74829231"
-            className="networktracker-card"
-          >
-            <div className="networktracker-card-upper card-upper-1">
-              Network Tracker S1
-            </div>
-            <div className="networktracker-card-title card-title-1">
-              First semester of 23-24 - MC OWN
-            </div>
-          </Link> */}
+        <div className="hub-page-hero-image col-md-6 col-sm-12">
+          {image && <img src={image} alt={page.title} />}
         </div>
-      </section>
+      </div>
+
+      <hr />
+      <div className="hub-page-content">
+        <div className="hub-page-title">Everything you need in one place</div>
+        {page.content && page.content.length > 0 ? (
+          <div className="hub-page-resources row g-3">
+            {page.content.map((item, index) => (
+              <div
+                key={index}
+                className="hub-page-resource-item m-5 col-12 col-sm-6 col-md-3"
+              >
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <div className="hub-page-resource-image">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div className="hub-page-resource-title">{item.title}</div>
+                  <div className="hub-page-resource-subtitle">{item.subtitle}</div>
+                </a>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>No additional content available.</div>
+        )}
+      </div>
       <Footer />
     </>
   );

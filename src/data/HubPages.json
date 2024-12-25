@@ -1,17 +1,21 @@
 {
     "mkt": {
-        "image": "mkt.png",
+        "image": "KeyAreas/MKT.png",
         "title": "Marketing",
+        "side":"Back-Office",
         "content": [
             {
                 "link": "https://drive.google.com/file/d/1fihXf1WIonIDHUU3kRHG5JIfhYV80TPk/view?usp=sharing",
                 "title": "The Era of Generative AI",
-                "subtitle": "What is generative AI?"
+                "subtitle": "What is generative AI?",
+                "image":"KeyAreas/MKT/CercinaAI.png"
+                
             },
             {
                 "link": "https://drive.google.com/file/d/1ZhK6k8lJHi-Eq0kiodtqn8hoeVpFWUad/view?usp=sharing",
                 "title": "Cercina AI output Book",
-                "subtitle": "A workshop our dear partners CERCINA provided about AI"
+                "subtitle": "A workshop our dear partners CERCINA provided about AI",
+                "image":"../assests/KeyAreas/MKT/CercinaAI.png"
             },
             {
                 "link": "https://drive.google.com/file/d/1-eGQ2m8wvPttds6YsLlTF9jz2YchsaIa/view?usp=sharing",
@@ -42,23 +46,31 @@
     },
     "bd": {
         "image": "bd.png",
-        "title": "Business Development"
+        "title": "Business Development",
+        "side":"Back-Office"
+
     },
     "fnl": {
         "image": "fnl.png",
-        "title": "FINANCE & LEGALITIES"
+        "title": "FINANCE & LEGALITIES",
+        "side":"Back-Office"
+
     },
     "tm": {
         "image": "tm.png",
-        "title": "TALENT MANAGEMENT"
+        "title": "TALENT MANAGEMENT",
+        "side":"Back-Office"
+
     },
     "ecb": {
         "image": "ecb.png",
-        "title": "ENTITY CONTROL BOARD"
+        "title": "ENTITY CONTROL BOARD",
+        "side":"Back-Office"
     },
     "od": {
         "image": "od.png",
         "title": "ORGANIZATION DEVELOPMENT",
+        "side":"Back-Office",
         "content": [
             {
                 "link": "https://drive.google.com/file/d/1qPh-775iMWNqnpiHl8GhaY33twUKfG7Z/view?usp=sharing",
@@ -95,6 +107,7 @@
     "ogta": {
         "title": "OUTGOING GLOBAL TALENT",
         "image": "gta.png",
+        "side":"Front-Office",
         "content": [
             {
                 "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
@@ -155,11 +168,14 @@
     },
     "ogv": {
         "image": "gv.png",
-        "title": "OUTGOING GLOBAL VOLUNTEER"
+        "title": "OUTGOING GLOBAL VOLUNTEER",
+        "side":"Front-Office"
+
     },
     "ogte": {
         "image": "gte.png",
         "title": "OUTGOING GLOBAL TEACHER",
+        "side":"Front-Office",
         "content": [
             {
                 "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
@@ -221,6 +237,7 @@
     "igta": {
         "image": "gta.png",
         "title": "INCOMING GLOBAL TALENT",
+        "side":"Front-Office",
         "content": [
             {
                 "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",
@@ -281,11 +298,13 @@
     },
     "igv": {
         "image": "gv.png",
-        "title": "INCOMING GLOBAL VOLUNTEER"
+        "title": "INCOMING GLOBAL VOLUNTEER",
+        "side":"Front-Office"
     },
     "igte": {
         "image": "gte.png",
         "title": "INCOMING GLOBAL TEACHER",
+        "side":"Front-Office",
         "content": [
             {
                 "link": "https://docs.google.com/presentation/d/1znG54XfNZJ0_olqjD2UOZmrKbzYzx2izjRCh57eKiTE/edit?usp=drive_link",

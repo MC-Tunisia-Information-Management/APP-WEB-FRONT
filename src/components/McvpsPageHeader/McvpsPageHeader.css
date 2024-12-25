@@ -1,0 +1,75 @@
+/* Overall header container */
+.mcvps-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%; /* Adjust to fit the required height */
+    padding: 0px; /* Remove extra padding */
+    margin: 0;
+    background-color: #f5f5f5; /* Optional background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left part: Text container */
+.header-left {
+    flex: 1; /* Take 50% of the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mcvp-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    margin-bottom: 10px; /* Space between name and position */
+}
+
+.mcvp-name {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase; /* Make the name uppercase */
+    position: relative; /* To position the underline */
+    padding-left: 90px;
+    margin: 10px;
+    font-size: 50px;
+}
+
+.mcvp-name::after {
+    content: ""; /* Add a line as an underline */
+    position: absolute;
+    bottom: -5px; /* Position the line just below the text */
+    left: 90px; /* Matches the text padding */
+    width: 120px; /* Adjust the length of the line */
+    height: 2px; /* Line thickness */
+    background-color: #333; /* Line color */
+}
+
+.mcvp-position {
+    font-size: 1.2rem;
+    color: #666;
+    padding-left: 90px;
+    font-weight: bold; /* Make the position bold */
+    text-transform: uppercase; /* Make the position uppercase */
+    margin: 10px;
+
+}
+
+/* Right part: Image container */
+.header-right {
+    flex: 1; /* Take 50% of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding to eliminate white space */
+}
+
+.mcvp-image {
+    width: 100%; /* Make the image take up the entire right side */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Ensure the image covers the available space */
+    border-radius: 0; /* Remove border-radius for a full rectangle */
+}

@@ -1,25 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import "../css/mctunisia.css";
-import upperimage from "../assests/layerlayer.png";
-import mcimage from "../assests/MCpic.png";
-import ReactSimplyCarousel from "react-simply-carousel";
-import boumiza from "../assests/MC Pictures/boumiza.jpg";
-import mhiri from "../assests/MC Pictures/mhiri.jpg";
-import chaima from "../assests/MC Pictures/chaima.jpg";
-import hamma from "../assests/MC Pictures/hamma.jpg";
-import azmi from "../assests/MC Pictures/azmi.jpg";
-import boughi from "../assests/MC Pictures/boughi.jpg";
-import lamis from "../assests/MC Pictures/lamis.jpg";
-import nacef from "../assests/MC Pictures/nacef.jpg";
-import slim from "../assests/MC Pictures/slim.jpg";
-import hiba from "../assests/MC Pictures/hiba.jpg";
-import eya from "../assests/MC Pictures/eya.jpg";
+import mcimage from "../assests/MC HUSTLE/MC Hustle.jpg";
+import MCP from "../assests/MC HUSTLE/MCP_NB.png";
+import MCVP_BD from "../assests/MC HUSTLE/MCVP_BD_NB.png";
+import MCVP_BXP from "../assests/MC HUSTLE/MCVP_BXP.png";
+import MCVP_CXO from "../assests/MC HUSTLE/MCVP_CXO.png";
+import MCVP_DM from "../assests/MC HUSTLE/MCVP_DM.png";
+import MCVP_IGV from "../assests/MC HUSTLE/MCVP_IGV.png";
+import MCVP_OD from "../assests/MC HUSTLE/MCVP_OD_NB.png";
+import MCVP_OGT from "../assests/MC HUSTLE/MCVP_OGT.png";
+import MCVP_OGV from "../assests/MC HUSTLE/MCVP_OGV.png";
+import MCVP_PD from "../assests/MC HUSTLE/MCVP_PD.png";
+import MCVP_IM from "../assests/MC HUSTLE/MCVP_IM.png";
+import MCVP_TM from "../assests/MC HUSTLE/MCVP_TM.png";
+import MCVP_FnL from "../assests/MC HUSTLE/MCVP_FnL.png";
+import MCVP_IGT from "../assests/MC HUSTLE/MCVP_IGT.png";
+
+import MCOwn from "../assests/PreviousMCs/own.jpg";
+import MCForce from "../assests/PreviousMCs/force.jpg";
+import MCMyrath from "../assests/PreviousMCs/myrath.jpg";
+import MCGenesis from "../assests/PreviousMCs/genesis.jpg";
+import MCAim from "../assests/PreviousMCs/aim.png";
+import MCHive from "../assests/PreviousMCs/hive.png";
+
 import ReactGA from "react-ga4";
+import Slider from "react-slick";
+
+import { Link } from "react-router-dom";  
+
 
 function MC() {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
     ReactGA.send({
@@ -29,253 +42,179 @@ function MC() {
     });
   }, []);
 
+  const heroSliderSettings = {
+    dots: true,
+    infinite: false,
+    speed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+  };
+
+  const teamSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
+    prevArrow: <div className="slick-prev">{""}</div>, // Custom previous arrow
+    nextArrow: <div className="slick-next">{""}</div>, // Custom next arrow
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  
+
+  const teamMembers = [
+    { img: MCP, name: "Azmi Abroug", position: "MCP" },
+    { img: MCVP_OD, name: "Amine Ghariani", position: "MCVP OD" },
+    { img: MCVP_IM, name: "Yosr Akrout", position: "MCVP IM" },
+    { img: MCVP_TM, name: "Sihem Khlifi", position: "MCVP TM" },
+    { img: MCVP_BXP, name: "Saif Kridene", position: "MCVP BXP" },
+    { img: MCVP_DM, name: "Chirine Souidi", position: "MCVP DM" },
+    { img: MCVP_CXO, name: "Yessine Nacef", position: "MCVP CXO" },
+    { img: MCVP_OGT, name: "Imen Houmani", position: "MCVP OGT" },
+    { img: MCVP_OGV, name: "Idriss Drissi", position: "MCVP OGV" },
+    { img: MCVP_IGT, name: "Elyes Zarrad", position: "MCVP IGT" },
+    { img: MCVP_IGV, name: "Rayan Jbali", position: "MCVP IGV" },
+    { img: MCVP_BD, name: "Mouhib Benkhlifa", position: "MCVP BD&EWA" },
+    { img: MCVP_PD, name: "Firas Atigui", position: "MCVP PD" },
+    { img: MCVP_FnL, name: "Ilhem Abdellewi", position: "MCVP F&L" },
+
+  ];
+
+  const PreviousMCs = [
+    { img: MCOwn, name: "MC Own", year: "23.24" },
+    { img: MCForce, name: "MC Force", year: "22.23" },
+    { img: MCMyrath, name: "MC Myrath", year: "21.22" },
+    { img: MCGenesis, name: "MC Genesis", year: "20.21" },
+    { img: MCAim, name: "MC Aim", year: "19.20" },
+    { img: MCHive, name: "MC Hive", year: "18.19" },
+
+  ];
+
   return (
     <>
       <NavBar className="navbarr" />
-      <section className="mctunsia">
-        <div className="mctunsia-upper">
-          <div>
-            <img className="upperimage" src={upperimage} alt="" />
+      <div className="hero-section">
+        {/* Hero Slider */}
+        <Slider {...heroSliderSettings} className="hero-slider">
+          <div className="hero-image-container">
+            <img
+              src={mcimage}
+              alt={`Hero Slide`}
+              className="hero-image"
+            />
           </div>
-          <div className="mctunsia-upper-text-image-container">
-            <div className="upper-text-container">
-              <div className="mctunsia-text-type1">MC Tunisia</div>
+        </Slider>
+      </div>
+
+      <div className="m-5">
+        <div className="mc-name">MC TUNISIA</div>
+      </div>
+
+      <div className="first-container-mc">
+        <div className="mc-text">
+          Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+          Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur
+          anonyme assembla ensemble des.
+        </div>
+
+        <div className="mc-history">
+          <div className="mc-history-text">Our Stand</div>
+          <div className="row mx-5">
+            <div className="col-md-4 col-sm-12 mb-3">
+              <div className="mc-history-container">
+                {/* Content for first container */}
+              </div>
             </div>
-            <div className="upper-image-container">
-              <div className="circle"></div>
-              <div className="image-container">
-                <img className="mc-image" src={mcimage} alt="" />
+            <div className="col-md-4 col-sm-12 mb-3">
+              <div className="mc-history-container">
+                {/* Content for second container */}
+              </div>
+            </div>
+            <div className="col-md-4 col-sm-12 mb-3">
+              <div className="mc-history-container">
+                {/* Content for third container */}
               </div>
             </div>
           </div>
         </div>
-        <div className="middle-container-mc">
-          <div className="middle-part-title-mc">ONWARD WE NAVIGATE</div>
-          <div className="mc-stand">MC 23.24 STAND</div>
-          <div className="middle-part-content-container-mc">
-            <div className="middle-mc-card">
-              <div>Onward</div>
-              <div className="mc-card-content">
-                This word represents the direction and momentum that MC OWN aims
-                to maintain. It signifies progress, growth, and a constant
-                movement towards achieving the goals and vision set for the
-                organization.
-                <br />
-                <br />
-                It emphasize the importance of looking ahead, staying proactive,
-                and continuously striving for improvement.
+      </div>
+
+      <div className="mc-team-bloc">
+        <div className="mc-team-text">Meet our MC</div>
+        <div className="mc-slider">
+
+        {/* Team Members Slider */}
+        <Slider {...teamSliderSettings} className="team-slider">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-member-container">
+              <img
+                src={member.img}
+                alt={member.name}
+                className="team-member-img"
+                />
+              <div className="team-member-info">
+              <h4>
+              <Link to={`/mcvp/${index}`} className="team-member-link">
+                    {member.name}
+                    </Link>
+                  </h4>
+                  <p>{member.position}</p>
               </div>
             </div>
-            <div className="middle-mc-card">
-              <div>We</div>
-              <div className="mc-card-content">
-                "We" emphasizes the collective effort and collaboration within
-                the organization.
-                <br />
-                <br />
-                It signifies that the journey is not undertaken by one
-                individual alone, but by a united team of passionate members
-                working together towards a common purpose.
-                <br />
-                <br />
-                It reflects our belief in the power of teamwork, inclusion, and
-                diversity of thought to drive positive change.
-              </div>
-            </div>
-            <div className="middle-mc-card">
-              <div>Navigate</div>
-              <div className="mc-card-content">
-                "Navigate" implies that there may be challenges and
-                uncertainties along the way, but with strong leadership and
-                adaptability, the organization can overcome obstacles and find
-                the best path forward.
-                <br />
-                <br />
-                It shows our commitment to agile decision-making, effective
-                problem-solving, and the ability to lead the organization
-                towards success even in complex situations.
-              </div>
-            </div>
+          ))}
+        </Slider>
           </div>
-        </div>
-        <div className="middle-container-mc">
-          <div className="middle-part-title-mc">MEET THE MC TEAM</div>
-          <div className="middle-part-subtitle-mc">MC OWN</div>
-          <div className="carousel-container">
-            <ReactSimplyCarousel
-              className="carousel-container"
-              activeSlideIndex={activeSlideIndex}
-              onRequestChange={setActiveSlideIndex}
-              itemsToShow={1}
-              itemsToScroll={1}
-              forwardBtnProps={{
-                //here you can also pass className, or any other button element attributes
-                style: {
-                  alignSelf: "center",
-                  background: "black",
-                  border: "none",
-                  borderRadius: "50%",
-                  color: "white",
-                  cursor: "pointer",
-                  fontSize: "20px",
-                  height: 30,
-                  lineHeight: 1,
-                  textAlign: "center",
-                  width: 30,
-                },
-                children: (
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-arrow-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                      />
-                    </svg>
-                  </span>
-                ),
-              }}
-              backwardBtnProps={{
-                //here you can also pass className, or any other button element attributes
-                style: {
-                  alignSelf: "center",
-                  background: "black",
-                  border: "none",
-                  borderRadius: "50%",
-                  color: "white",
-                  cursor: "pointer",
-                  fontSize: "20px",
-                  height: 30,
-                  lineHeight: 1,
-                  textAlign: "center",
-                  width: 30,
-                },
-                children: (
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-arrow-left"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
-                      />
-                    </svg>
-                  </span>
-                ),
-              }}
-              responsiveProps={[
-                {
-                  itemsToShow: 4,
-                  itemsToScroll: 1,
-                  minWidth: 768,
-                },
-              ]}
-              speed={600}
-              easing="ease"
-            >
-              <div className="mc-carousel-card">
-                <img src={hamma} alt="MCP" />
-                <p className="mc-position">
-                  Hamma Lahouar
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCP</span>
-                </p>
+      </div>
+      <div className="first-container-mc">
+        <div className="mc-name">Previous MC Teams</div>
+        <div className="p-1"></div>
+        <div className="mc-slider">
+
+        {/* Team Members Slider */}
+        <Slider {...teamSliderSettings} className="team-slider">
+          {PreviousMCs.map((MC, index) => (
+            <div key={index} className="team-member-container">
+              <img
+                src={MC.img}
+                alt={MC.name}
+                className="team-member-img"
+                />
+              <div className="team-member-info">
+                <h4>{MC.name}</h4>
+                <p>{MC.year}</p>
               </div>
-              <div className="mc-carousel-card">
-                <img src={azmi} alt="MCVP OD" />
-                <p className="mc-position">
-                  Azmi Abroug
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP OD</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={boumiza} alt="MCVP IM" />
-                <p className="mc-position">
-                  Oussema Boumiza
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP IM</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={boughi} alt="MCVP TM" />
-                <p className="mc-position">
-                  Ahmed Boughizene
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP TM</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={chaima} alt="MCVP MKT" />
-                <p className="mc-position">
-                  Chaima Sassi
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP MKT</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={lamis} alt="MCVP OGT" />
-                <p className="mc-position">
-                  Lamis Redissi
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP OGT</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={nacef} alt="MCVP OGV" />
-                <p className="mc-position">
-                  Yassine Nacef
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP OGV</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={slim} alt="MCVP IGT" />
-                <p className="mc-position">
-                  Slim Labassi
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP IGT</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={hiba} alt="MCVP IGV" />
-                <p className="mc-position">
-                  Hiba Laatiri
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP IGV</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={mhiri} alt="MCVP BD&EWA" />
-                <p className="mc-position">
-                  Amine Mhiri
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP BD&EWA</span>
-                </p>
-              </div>
-              <div className="mc-carousel-card">
-                <img src={eya} alt="MCVP F&L" />
-                <p className="mc-position">
-                  Eya Achour
-                  <br />
-                  <span style={{ color: "#646A69" }}>MCVP F&L</span>
-                </p>
-              </div>
-            </ReactSimplyCarousel>
+            </div>
+          ))}
+        </Slider>
           </div>
-        </div>
-      </section>
+      </div>
+
+      <hr />
       <Footer />
     </>
   );

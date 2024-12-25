@@ -1,134 +1,205 @@
-/* Original styles */
+/* Adjustments for Navbar */
 .navbar {
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
-    background: linear-gradient(to right, var(--main-color1), var(--main-color2));
-    color: white;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  height: 60px;
+  background: var(--main-color2);
+  color: var(--main-color1);
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 1px  1px rgba(0, 0, 0, 0.1)  ;
 }
 
 .navbar-content {
-    flex: 70%;
-    justify-content: right;
-    padding-right: 7%;
-    column-gap: 30px;
-    height: 100%;
-    align-items: center;
-    display: flex;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 4%;
 }
 
-.navbar-logo {
-    display: flex;
-    flex: 15%;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 15%;
+.navbar-logo, .navbar-button-container {
+  flex: 0.15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-button {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px; /* Adjust height as needed */
-    width: 110px;
-    border-radius: 30px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  margin-left: 10px; /* Adjust margin as needed */
 }
 
-.navbar-button-text {
-    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 2px;
-    padding-right: 1px;
-}
-
-/* Hide hamburger on large screens */
+/* Show hamburger only on small screens */
 .navbar-hamburger {
-    display: none;
+  display: none;
 }
 
-/* Media Queries for smaller screens */
 @media (max-width: 768px) {
-    .navbar-content {
-        display: none; /* Hide the navbar content initially */
-    }
+  .navbar-content {
+    display: none; /* Hide menu on small screens */
+  }
 
-    .navbar-hamburger {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
+  .navbar-hamburger {
+    display: block; /* Show hamburger */
+    cursor: pointer;
+  }
 
-    .navbar-hamburger img {
-        width: 30px;
-        height: 30px;
-    }
+  .navbar-content.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--main-color2);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 8px;
+  }
 
-    .navbar-content.active {
-        display: flex; /* Show the navbar content when active */
-        flex-direction: column;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #333;
-        overflow-y: auto;
-        padding: 10px 0;
-        z-index: 999;
-    }
+  /* Adjust navbar content links to be more responsive */
+  .navbar-content a {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+    color: var(--main-color1);
+    text-decoration: none;
+  }
+  .navbar .knowledge-hub-menu.active .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Make it full width on mobile */
+    margin-top: 5px;
+    border-top: 1px solid var(--main-color1); /* Border for separation */
+  }
 
-    .navbar-content a {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+  /* Submenu item padding and styles on mobile */
+  .knowledge-hub-menu .sub-menu-item {
+    padding: 12px;
+    color: var(--main-color1);
+    font-size: 16px;
+  }
 
-    .navbar-button-container {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 10px;
-    }
+  .sub-menu-item:hover {
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
+
+  /* Nested submenu styles on mobile */
+  .nested-sub-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: var(--main-color2);
+    min-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .sub-menu-item:hover .nested-sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nested-sub-menu .sub-menu-item {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .nested-sub-menu .sub-menu-item:hover {
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
+
+  /* Show submenu on tap for mobile */
+  .navbar .knowledge-hub-menu.active .sub-menu-item {
+    cursor: pointer;
+  }
+
+  /* Ensure that all submenus are clickable */
+  .navbar .knowledge-hub-menu.active .sub-menu-item.active {
+    background-color: var(--main-color1);
+    color: var(--main-color2);
+  }
 }
 
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: row;
-        height: auto;
-        padding: 10px 0;
-    }
+/* Knowledge Hub Main Menu */
+.knowledge-hub-menu {
+  position: relative;
+}
 
-    .navbar-logo {
-        flex: none;
-    }
+/* Submenu hidden by default */
+.navbar .knowledge-hub-menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  min-width: 150px;
+  background: var(--main-color2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-    .navbar-hamburger {
-        align-self: flex-end;
-        margin-right: 20px;
-    }
+/* Show submenu when hovering over the Knowledge Hub menu */
+.navbar .knowledge-hub-menu:hover .sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 
-    .navbar-content.active {
-        display: flex; /* Show the navbar content when active */
-    }
+.knowledge-hub-menu .sub-menu-item {
+  padding: 8px;
+  background: var(--main-color2);
+  color: var(--main-color1);
+  cursor: pointer;
+  position: relative;
+}
+
+.sub-menu-item:hover {
+  background-color: var(--main-color1);
+  color: var(--main-color2);
+}
+
+/* Nested submenu styles */
+.nested-sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 150px;
+  background: var(--main-color2);
+  min-width: 240px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sub-menu-item:hover .nested-sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nested-sub-menu .sub-menu-item {
+  padding: 0px 15px;
+  color: var(--main-color1);
+}
+
+.nested-sub-menu .sub-menu-item:hover {
+  background-color: var(--main-color1);
+  color: var(--main-color2);
 }

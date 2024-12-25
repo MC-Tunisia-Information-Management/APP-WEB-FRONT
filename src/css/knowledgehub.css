@@ -44,7 +44,7 @@ body {
   width: 10%; 
   height: 5px; 
   background-color: var(--main-color3); 
-  margin: 0px auto 0; 
+  margin: 0px auto 0;
 }
 
 .departments-grid {
@@ -54,10 +54,10 @@ body {
   justify-content: center;
 }
 
-/
+
 .department {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -65,9 +65,9 @@ body {
   align-items: flex-start; 
   padding: 10px; 
   text-align: left;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   gap: 40px; 
-  max-width: 450px;
+  max-width: 450px; 
   margin: 10px auto; 
 }
 
@@ -76,7 +76,8 @@ body {
   width: 80px; 
   height: 90px;
   object-fit: contain;
-  flex-shrink: 0;
+  flex-shrink: 0; 
+}
 
 
 .department-content {
@@ -100,6 +101,7 @@ body {
   margin-bottom: 8px; 
 }
 
+
 .read-more {
   color: #0056a4;
   text-decoration: none;
@@ -107,6 +109,7 @@ body {
   align-self: flex-start; 
   font-size: 14px; 
 }
+
 .front-office-section {
   padding: 40px 20px;
   background-color: #387adf;
@@ -123,7 +126,7 @@ body {
   display: block;
   width: 10%; 
   height: 5px; 
-  background-color: var(--main-color3);
+  background-color: var(--main-color3); 
   margin: 0px auto 0; 
 }
 

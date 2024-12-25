@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Knowledge Hub Banner Section */
+ 
   .banner {
     position: relative;
     height: 50vh;
@@ -17,19 +17,19 @@ body {
     background-color: #ffffff;
   }
   .banner img {
-    width: 100%; /* Ensures the image spans the full width of the container */
-    height: 100%; /* Matches the height of the container */
-    object-fit: cover; /* Ensures the image fills the container without distortion */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
   }
   .banner h1 {
-    font-size: 3rem; /* Adjust the size as needed */
-    background: linear-gradient(to right, gray, #0056b3); /* Gradient from gray to blue */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+    font-size: 3rem; 
+    background: linear-gradient(to right, gray, #0056b3); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
     text-align: center;
   }
   
-  /* Back Office Section */
+  
   .back-section {
     background-image: url("../assests/BackgroundMain.png");
     background-size: cover;
@@ -47,68 +47,68 @@ body {
   .back-title::after {
     content: "";
     display: block;
-    width: 15%; /* Line spans the full width of the text */
-    height: 5px; /* Thickness of the line */
-    background-color: var(--main-color3); /* Match the main color */
-    margin: 0px auto 0; /* Centers the line */
+    width: 15%; 
+    height: 5px;
+    background-color: var(--main-color3);
+    margin: 0px auto 0; 
   }
   
   .dep-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Two columns */
-    gap: 20px; /* Space between the cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     justify-content: center;
   }
   
-  /* Department Card Styling */
+  
   .dep {
     display: flex;
-    flex-direction: column; /* Horizontal layout for the image and content */
+    flex-direction: column;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    align-items: center; /* Align items at the top */
-    padding: 20px; /* Reduced padding */
+    align-items: center; 
+    padding: 20px; 
     text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
 
-    max-width: 450px; /* Optional: Limit the card width */
-    margin: 10px auto; /* Add spacing around cards */
+    max-width: 450px; 
+    margin: 10px auto; 
   }
   
-  /* Image on the top-left */
+  
 
   
-  /* Content on the top-right */
+ */
   .dep-content {
-    flex: 1; /* Take up remaining space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: flex-start; 
   }
   
-  /* Title */
+ 
   .dep-title {
-    font-size: 18px; /* Reduced font size */
-    margin-bottom: 8px; /* Reduced spacing */
+    font-size: 18px; 
+    margin-bottom: 8px; 
     color: #333;
   }
   
-  /* Description */
+  
   .dep-description {
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px; 
     color: #666;
-    margin-bottom: 8px; /* Reduced spacing */
+    margin-bottom: 8px; 
   }
   
-  /* Read More Link */
+  
   .read-more {
     color: #0056a4;
     text-decoration: none;
     font-weight: bold;
-    align-self: center; /* Align link to the left */
-    font-size: 14px; /* Match description size */
+    align-self: center; 
+    font-size: 14px; 
   }
   
   

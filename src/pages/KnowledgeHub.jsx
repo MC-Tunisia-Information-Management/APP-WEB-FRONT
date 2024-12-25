@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
-import "../css/knowledgehub.css"; // Ensure this file includes styling for the updated layout
+import "../css/knowledgehub.css"; 
 import { Link } from "react-router-dom";
 import ReactGA from "react-ga4";
-/*import mcimage from "../assests/MC HUSTLE/MC Hustle.jpg";*/
+
 import MaktIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/makt.png";
 import BDIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/BDD..png";
 import ECIcon from "C:/Users/LENOVO/Desktop/APP-WEB-FRONT/src/assests/ecb.png";
@@ -25,7 +25,7 @@ const KnowledgeHubBanner = () => {
   return (
     <>
       <NavBar />
-      {/* Banner Section */}
+      {}
       <div className="banner">
             <img
               src={knowledge}
@@ -35,11 +35,11 @@ const KnowledgeHubBanner = () => {
       </div>
 
       <section className="knowledgehub">
-        {/* Back Office Section */}
+        {}
         <div className="back-office-section">
           <h2 className="back-office-title">The Back Office</h2>
           <div className="departments-grid">
-            {/* Example Department Card */}
+            {}
             <div className="department">
               <img src={MaktIcon} alt="mkt" className="department-icon" />
               <div className="department-content">
@@ -51,7 +51,7 @@ const KnowledgeHubBanner = () => {
               </div>
             </div>
 
-            {/* Other Department Cards */}
+            {}
             <div className="department">
               <img src={BDIcon} alt="BD Icon" className="department-icon" />
               <div className="department-content">
@@ -107,11 +107,11 @@ const KnowledgeHubBanner = () => {
           </div>
         </div>
 
-        {/* Front Office Section */}
+        {}
         <div className="front-office-section">
           <h2 className="front-office-title">The Front Office</h2>
           <div className="departments-grid">
-            {/* Example Front Office Card */}
+            {}
             <div className="department">
               <img src="path-to-igt-icon.png" alt="IGT Icon" className="department-icon" />
               <div className="department-content">

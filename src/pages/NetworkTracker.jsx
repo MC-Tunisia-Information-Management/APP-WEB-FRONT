@@ -15,7 +15,7 @@ function NetworkTracker() {
   return (
     <>
       <NavBar/>
-      {/* Banner Section */}
+      {}
       <div className="banner">
       <h1>NETWORK TRACKER</h1>
       <img
@@ -26,12 +26,12 @@ function NetworkTracker() {
       </div>
 
       <section className="knowledge">
-        {/* Back Office Section */}
+        {}
         <div className="back-section">
           <h2 className="back-title">Everything you need in one place</h2>
 
           <div className="dep-grid">
-            {/* Example Department Card */}
+            {}
             <div className="dep">
               
               <div className="dep-content">
@@ -43,7 +43,7 @@ function NetworkTracker() {
               </div>
             </div>
 
-            {/* Other Department Cards */}
+            {}
             <div className="dep">
              
               <div className="dep-content">

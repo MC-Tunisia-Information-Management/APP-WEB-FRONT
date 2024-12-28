@@ -71,7 +71,7 @@
   justify-content: center;
 }
 
-/
+
 .department {
   display: flex;
   flex-direction: row; 
@@ -161,5 +161,4 @@
   height: 5px; 
   background-color: var(--main-color3);
   margin: 0px auto 0; 
-}
-
+}}

@@ -1,25 +1,153 @@
 [
     {
-      "name": "Yosr Akrout",
-      "currentPosition": "MCVP Information Management",
+      "name": "Azmi Abroug",
+      "currentPosition": "MCP",
       "picture": "MCP.png", 
       "journey": [
-        { "position": "Member", "description": "LC RUSPINA.", "side": "left" },
-        { "position": "Team Leader", "description": "IGV Department", "side": "right" },
-        { "position": "Vice President", "description": "IGV Department", "side": "left" },
-        { "position": "MCVP", "description": "Information Management", "side": "right" }
+        { "position": "MCP", "description": "Member Committee President ", "side": "right" },
+        { "position": "MCVP", "description": "Organizational Developpement", "side": "left" },
+        { "position": "LCP", "description": "Local Committee President", "side": "right" },
+        { "position": "LCVP", "description": "incoming Global Talent/Teacher", "side": "left" },
+        { "position": "Team Leader", "description": "incoming Global Talent/Teacher", "side": "right" },
+        { "position": "Team Member", "description": "incoming Global Talent/Teacher", "side": "right" }
+
+
       ]
     },
     {
-      "name": "Jane Smith",
-      "currentPosition": "MCVP Marketing",
-      "picture": "../../assests/Pictures/21.jpg", 
+      "name": "Amine Ghariani",
+      "currentPosition": "MCVP OD",
+      "picture": "MCVP_OD_NB.png", 
       "journey": [
-        { "position": "Member", "description": "LC RUSPINA.", "side": "left" },
-        { "position": "Team Leader", "description": "Marketing Department", "side": "right" },
-        { "position": "Vice President", "description": "Marketing Department", "side": "left" },
-        { "position": "MCVP", "description": "Marketing Management", "side": "right" }
+        { "position": "MCVP", "description": "Organizational Developpement", "side": "right" },
+        { "position": "LCP", "description": "Local Committee President", "side": "left" },
+        { "position": "Vice President", "description": "TM&MxP Department", "side": "right" }
+      ]
+    },
+    {
+      "name": "Yosr Akrout",
+      "currentPosition": "MCVP IM",
+      "picture": "MCVP_IM.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Information Management", "side": "right" },
+        { "position": "LCVP", "description": "incoming Global Volenteer", "side": "left" },
+        { "position": "Team Leader", "description": "incoming Global Volenteer", "side": "right" },
+        { "position": "Team Member", "description": "incoming Global Volenteer", "side": "left" }
+      ]
+    },
+    {
+      "name": "Sihem Khlifi",
+      "currentPosition": "MCVP TM",
+      "picture": "MCVP_TM.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Talent Management", "side": "right" },
+        { "position": "LCVP", "description": "Talent Management", "side": "left" },
+        { "position": "TL", "description": "outgoing Global Talent/Teacher", "side": "right" }
+      ]
+    },
+    {
+      "name": "Saif kridene",
+      "currentPosition": "MCVP BxP",
+      "picture": "MCVP_BXP.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Brand Experience", "side": "right" },
+        { "position": "LCVP", "description": "Marketing", "side": "left" }
+      ]
+    },
+    {
+      "name": "Chirine Souidi",
+      "currentPosition": "MCVP DM",
+      "picture": "MCVP_DM.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Digital Marketing", "side": "right" },
+        { "position": "LCVP", "description": "Buisness Developpement & Engage with AIESEC", "side": "left" },
+        { "position": "Middle Manger", "description": "Buisness Developpement & Engage with AIESEC", "side": "right" },
+        { "position": "Team Member", "description": "outgoing Global Volenteer", "side": "right" }
+      ]
+    },
+    {
+      "name": "Mohamed Yessine Nacef",
+      "currentPosition": "MCVP CXO",
+      "picture": "MCVP_CXO.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Chief Experience Officer", "side": "right" },
+        { "position": "MCVP", "description": "outgoing Global Volenteer", "side": "left" },
+        { "position": "LCVP", "description": "outgoing Global Volenteer", "side": "right" }
+      ]
+    },
+    {
+      "name": "Imen Houmani",
+      "currentPosition": "MCVP oGT",
+      "picture": "MCVP_OGT.png", 
+      "journey": [
+        { "position": "MCVP", "description": "outgoing Global Talent/Teacher","side": "right" },
+        { "position": "LCVP", "description": "outgoing Global Talent/Teacher", "side": "left" }
+      ]
+    },
+    {
+      "name": "Idriss Drissi",
+      "currentPosition": "MCVP OGV",
+      "picture": "MCVP_OGV.png", 
+      "journey": [
+        { "position": "MCVP", "description": "outgoing Global Volenteer","side": "right" },
+        { "position": "LCVP", "description": "outgoing Global Volenteer", "side": "left" },
+        { "position": "Team Leader", "description": "outgoing Global Volenteer", "side": "right" }
+      ]
+    },
+    {
+      "name": "Elyes Zarrad",
+      "currentPosition": "MCVP IGT",
+      "picture": "MCVP_IGT.png", 
+      "journey": [
+        { "position": "MCVP", "description": "incoming Global Talent/Teacher","side": "right" },
+        { "position": "LCVP", "description": "incoming Global Talent/Teacher", "side": "left" },
+        { "position": "Team Leader", "description": "incoming Global Talent/Teacher", "side": "right" },
+        { "position": "Team Member", "description": "incoming Global Talent/Teacher", "side": "right" }
+      ]
+    },
+    {
+      "name": "Rayen Jbali",
+      "currentPosition": "MCVP IGV",
+      "picture": "MCVP_IGV.png", 
+      "journey": [
+        { "position": "MCVP", "description": "incoming Global Talent/Teacher","side": "right" },
+        { "position": "LCVP", "description": "Incoming Exchange", "side": "left" }
+      ]
+    },
+    {
+      "name": "Mouhib Benkhlifa",
+      "currentPosition": "MCVP BD&EwA",
+      "picture": "MCVP_BD_NB.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Buisness Developpement & Engage with AIESEC","side": "left" },
+        { "position": "LCP", "description": "Local Committee President", "side": "right" },
+        { "position": "LCVP", "description": "Buisness Developpement & Engage with AIESEC", "side": "left" },
+        { "position": "Team Leader", "description": "incoming Global Talent/Teacher", "side": "right" },
+        { "position": "Team Member", "description": "incoming Global Talent/Teacher", "side": "left" }
+      ]
+    },
+    {
+      "name": "Firas Atigui",
+      "currentPosition": "MCVP PD",
+      "picture": "MCVP_PD.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Product Developpement","side": "left" },
+        { "position": "LCVP", "description": "Buisness Developpement & Engage with AIESEC", "side": "right" },
+        { "position": "Middle Manger", "description": "Buisness Developpement & Engage with AIESEC", "side": "left" },
+        { "position": "Team Member", "description": "outgoing Global Talent/Teacher", "side": "right" }
+      ]
+    },
+    {
+      "name": "Ilhem Abdellaoui",
+      "currentPosition": "MCVP F&L",
+      "picture": "MCVP_FnL.png", 
+      "journey": [
+        { "position": "MCVP", "description": "Finance & Legalities","side": "right" },
+        { "position": "LCVP", "description": "Finance & Legalities", "side": "left" },
+        { "position": "Middle Manger", "description": "Finance & Legalities", "side": "right" }
       ]
     }
+
+
   ]
   

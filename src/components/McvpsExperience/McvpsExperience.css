@@ -15,6 +15,7 @@
 
 /* Roadmap container */
 .roadmap-container {
+    padding: 100px;
     position: relative;
     width: 100%; /* Adjust width to center */
     margin: 0 auto; /* Center the container */
@@ -22,7 +23,7 @@
     flex-direction: column;
     align-items: center;
     background-image: url("../../assests/BackgroundMainBig.png");
-
+    background-size: cover;
 
 }
 

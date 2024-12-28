@@ -29,7 +29,6 @@ import MCHive from "../assests/PreviousMCs/hive.png";
 import ReactGA from "react-ga4";
 import Slider from "react-slick";
 
-import { Link } from "react-router-dom";  
 
 
 function MC() {
@@ -60,11 +59,23 @@ function MC() {
   };
 
   // Mapping the MCMembers object to an array for rendering
-  const mappedMCMembers = Object.entries(MCMembers).map(([key, member]) => ({
-    ...member,
-    img: imageMapping[member.img],
-  }));
+  const teamMembers = [
+    { img: MCP, name: "Azmi Abroug", position: "MCP" },
+    { img: MCVP_OD, name: "Amine Ghariani", position: "MCVP OD" },
+    { img: MCVP_IM, name: "Yosr Akrout", position: "MCVP IM" },
+    { img: MCVP_TM, name: "Sihem Khlifi", position: "MCVP TM" },
+    { img: MCVP_BXP, name: "Saif Kridene", position: "MCVP BXP" },
+    { img: MCVP_DM, name: "Chirine Souidi", position: "MCVP DM" },
+    { img: MCVP_CXO, name: "Yessine Nacef", position: "MCVP CXO" },
+    { img: MCVP_OGT, name: "Imen Houmani", position: "MCVP OGT" },
+    { img: MCVP_OGV, name: "Idriss Drissi", position: "MCVP OGV" },
+    { img: MCVP_IGT, name: "Elyes Zarrad", position: "MCVP IGT" },
+    { img: MCVP_IGV, name: "Rayan Jbali", position: "MCVP IGV" },
+    { img: MCVP_BD, name: "Mouhib Benkhlifa", position: "MCVP BD&EWA" },
+    { img: MCVP_PD, name: "Firas Atigui", position: "MCVP PD" },
+    { img: MCVP_FnL, name: "Ilhem Abdellewi", position: "MCVP F&L" },
 
+  ];
   const heroSliderSettings = {
     dots: true,
     infinite: false,
@@ -212,12 +223,17 @@ function MC() {
 
       <div className="mc-team-bloc">
         <div className="mc-team-text">Meet our MC</div>
-        <Slider {...teamSliderSettings} className="team-slider">
-          {mappedMCMembers.map((member, index) => (
-            <div key={index} className="team-member-container">
-              <Link to={`/mc-tunisia/${member.link}`} className="team-member-link"> {/* Dynamic link based on the 'link' property */}
+        <div className="mc-slider">
 
-              <img src={member.img} alt={member.name} className="team-member-img" />
+        {/* Team Members Slider */}
+        <Slider {...teamSliderSettings} className="team-slider">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-member-container">
+              <img
+                src={member.img}
+                alt={member.name}
+                className="team-member-img"
+                />
               <div className="team-member-info">
               <h4>
               <Link to={`/mcvp/${index}`} className="team-member-link">
@@ -226,10 +242,10 @@ function MC() {
                   </h4>
                   <p>{member.position}</p>
               </div>
-              </Link>
             </div>
           ))}
         </Slider>
+          </div>
       </div>
 
       <div className="first-container-mc">

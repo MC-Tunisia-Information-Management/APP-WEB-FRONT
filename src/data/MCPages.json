@@ -1,0 +1,106 @@
+{
+    "MCP": {
+        "img": "MCP",
+        "name": "Azmi Abroug",
+        "position": "MCP",
+        "link":"mcp",
+        "AIESECExperience": []
+    },
+    "MCVP_OD": {
+        "img": "MCVP_OD",
+        "name": "Amine Ghariani",
+        "position": "MCVP OD",
+        "link":"mcvpod",
+        "AIESECExperience": []
+    },
+    "MCVP_IM": {
+        "img": "MCVP_IM",
+        "name": "Yosr Akrout",
+        "position": "MCVP IM",
+        "link":"mcvpim",
+
+        "AIESECExperience": []
+    },
+    "MCVP_TM": {
+        "img": "MCVP_TM",
+        "name": "Sihem Khlifi",
+        "position": "MCVP TM",
+        "link":"mcvptm",
+
+        "AIESECExperience": []
+    },
+    "MCVP_BXP": {
+        "img": "MCVP_BXP",
+        "name": "Saif Kridene",
+        "position": "MCVP BXP",
+        "link":"mcvpbxp",
+
+        "AIESECExperience": []
+    },
+    "MCVP_DM": {
+        "img": "MCVP_DM",
+        "name": "Chirine Souidi",
+        "position": "MCVP DM",
+        "link":"mcvpdm",
+
+        "AIESECExperience": []
+    },
+    "MCVP_CXO": {
+        "img": "MCVP_CXO",
+        "name": "Yessine Nacef",
+        "position": "MCVP CXO",
+        "link":"mcvpcxo",
+
+        "AIESECExperience": []
+    },
+    "MCVP_OGT": {
+        "img": "MCVP_OGT",
+        "name": "Imen Houmani",
+        "position": "MCVP OGT",
+        "link":"mcvpogt",
+
+        "AIESECExperience": []
+    },
+    "MCVP_OGV": {
+        "img": "MCVP_OGV",
+        "name": "Idriss Drissi",
+        "position": "MCVP OGV",
+        "link":"mcvpogv",
+        "AIESECExperience": []
+    },
+    "MCVP_IGT": {
+        "img": "MCVP_IGT",
+        "name": "Elyes Zarrad",
+        "position": "MCVP IGT",
+        "link":"mcvpigt",
+        "AIESECExperience": []
+    },
+    "MCVP_IGV": {
+        "img": "MCVP_IGV",
+        "name": "Rayan Jbali",
+        "position": "MCVP IGV",
+        "link":"mcvpigv",
+        "AIESECExperience": []
+    },
+    "MCVP_BD": {
+        "img": "MCVP_BD",
+        "name": "Mouhib Benkhlifa",
+        "position": "MCVP BD&EWA",
+        "link":"mcvpbd",
+        "AIESECExperience": []
+    },
+    "MCVP_PD": {
+        "img": "MCVP_PD",
+        "name": "Firas Atigui",
+        "position": "MCVP PD",
+        "link":"mcvppd",
+        "AIESECExperience": []
+    },
+    "MCVP_FnL": {
+        "img": "MCVP_FnL",
+        "name": "Ilhem Abdellewi",
+        "position": "MCVP F&L",
+        "link":"mcvpfnl",
+        "AIESECExperience": []
+    }
+}

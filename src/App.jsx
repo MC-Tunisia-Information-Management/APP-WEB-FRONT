@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/mc-tunisia" element={<MC />} />
           <Route path="/knowledge-hub/:hub" element={<HubPage />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />

@@ -46,8 +46,8 @@ const ConferencePage = () => {
 
       {/* Conference Section */}
       <div className="conference-section">
-        <h2>OUR CONFERENCES</h2>
-        <div className="conference-list">
+      <div className="hub-page-title">Our Conferences</div>
+      <div className="conference-list">
           {conferences.map((conference, index) => (
             <div
               className="conference-card"

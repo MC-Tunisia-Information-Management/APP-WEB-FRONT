@@ -2,10 +2,6 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-/* slick slider CSS */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
 /* Original styles */
 .home-main-page {
   margin-top: 60px;
@@ -74,11 +70,11 @@
 /* slick dots customization */
 .slick-dots li button:before {
   color: white;
-}
-.hero-image {
+  .hero-image {
   width: 100%;
   height: 60vh;
   object-fit: cover;
+}
 }
 
 /* slick dots customization */
@@ -87,21 +83,20 @@
 }
 
 .search {
-  background-image: linear-gradient(
-    to right,
-    var(--main-color1),
-    var(--main-color2)
-  );
+
   height: 60vh;
 }
 
 .search-container { 
+  background-image: url(../assests/BackgroundMain.png);
+  background-size: cover;
   height: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 70px;
 }
 
 .konnect1 {
@@ -118,8 +113,6 @@
   color: var(--main-color3);
   font-size: 250%;
 }
-
-
 
 .search-input-container {
   margin-top: 5px;

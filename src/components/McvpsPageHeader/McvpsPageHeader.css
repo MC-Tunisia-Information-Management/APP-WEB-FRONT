@@ -29,7 +29,7 @@
 
 .mcvp-name {
     font-size: 2rem;
-    color: #333;
+    color: var(--main-color1);
     font-weight: bold;
     text-transform: uppercase; /* Make the name uppercase */
     position: relative; /* To position the underline */
@@ -45,12 +45,12 @@
     left: 90px; /* Matches the text padding */
     width: 120px; /* Adjust the length of the line */
     height: 2px; /* Line thickness */
-    background-color: #333; /* Line color */
+    background-color: var(--main-color3); /* Line color */
 }
 
 .mcvp-position {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--main-color3);
     padding-left: 90px;
     font-weight: bold; /* Make the position bold */
     text-transform: uppercase; /* Make the position uppercase */
@@ -68,6 +68,7 @@
 }
 
 .mcvp-image {
+    max-width: 400px;
     width: 100%; /* Make the image take up the entire right side */
     height: auto; /* Maintain the image's aspect ratio */
     object-fit: cover; /* Ensure the image covers the available space */

@@ -98,9 +98,9 @@ function NavBar() {
           <div>Conference Outputs</div>
         </Link>
 
-        <Link to="/contact-us" style={{ color: "inherit", textDecoration: "none" }}>
+        {/* <Link to="/contact-us" style={{ color: "inherit", textDecoration: "none" }}>
           <div>Contact Us</div>
-        </Link>
+        </Link> */}
       </div>
 
       <div className="navbar-hamburger navbar-button-container" onClick={toggleMenu}>
